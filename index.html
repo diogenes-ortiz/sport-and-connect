@@ -1,0 +1,674 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sport & Connect · Networking + Deporte — 1ª Edición Pádel</title>
+<meta name="description" content="Un día donde el deporte conecta. Torneo de pádel, charla con speaker y evento de networking. Inscribite y asegurá tu lugar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0f0d; --bg2:#0d1512; --panel:#121b17; --panel2:#16211c;
+  --ink:#f1f7f3; --muted:#9bb0a6; --faint:#6d8276;
+  --lime:#c6ff4a; --lime2:#9be84a; --green:#1fb978; --green-d:#0e7a52;
+  --teal:#23d2b5;
+  --line:rgba(255,255,255,.08); --line2:rgba(255,255,255,.04);
+  --max:1180px; --r:20px;
+  --shadow:0 24px 60px -20px rgba(0,0,0,.6);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;background:var(--bg)}
+body{
+  background:
+    radial-gradient(900px 600px at 85% -10%, rgba(198,255,74,.10), transparent 55%),
+    radial-gradient(800px 600px at 5% 8%, rgba(35,210,181,.10), transparent 55%),
+    linear-gradient(180deg,#0a0f0d,#080c0a);
+  background-attachment:fixed;color:var(--ink);font-family:"Outfit",sans-serif;
+  overflow-x:hidden;line-height:1.55;-webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;border:0;background:none;cursor:pointer}
+img{display:block;max-width:100%}
+h1,h2,h3,h4{font-family:"Sora",sans-serif;line-height:1.1;letter-spacing:-.02em}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 22px}
+.eyebrow{font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--lime);font-weight:600}
+.grad{background:linear-gradient(100deg,var(--lime),var(--teal));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* ---------- NAV ---------- */
+header.nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);
+  background:linear-gradient(180deg,rgba(8,12,10,.85),rgba(8,12,10,.4));border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{display:flex;align-items:center;gap:10px;font-family:"Sora";font-weight:800;font-size:1.18rem}
+.logo .dot{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--lime),var(--green));color:#06210f;font-size:1.1rem}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{color:var(--muted);font-size:.94rem;font-weight:500;transition:.2s}
+.nav-links a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:12px 22px;border-radius:999px;font-weight:600;
+  font-size:.95rem;transition:.22s;white-space:nowrap;cursor:pointer}
+.btn-primary{background:linear-gradient(100deg,var(--lime),var(--lime2));color:#0a1505;box-shadow:0 10px 26px -8px rgba(198,255,74,.5)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 32px -8px rgba(198,255,74,.6)}
+.btn-ghost{border:1px solid var(--line);color:var(--ink);background:rgba(255,255,255,.02)}
+.btn-ghost:hover{border-color:var(--lime);color:var(--lime)}
+.menu-btn{display:none}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;padding:78px 0 70px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:9px;padding:7px 15px;border-radius:999px;
+  border:1px solid var(--line);background:rgba(198,255,74,.06);font-size:.82rem;color:var(--lime);font-weight:600;margin-bottom:24px}
+.badge .pulse{width:8px;height:8px;border-radius:50%;background:var(--lime);box-shadow:0 0 0 0 rgba(198,255,74,.6);animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(198,255,74,.55)}70%{box-shadow:0 0 0 12px rgba(198,255,74,0)}100%{box-shadow:0 0 0 0 rgba(198,255,74,0)}}
+.hero h1{font-size:clamp(2.5rem,5.6vw,4.3rem);font-weight:800;margin-bottom:20px}
+.hero p.lead{font-size:1.16rem;color:var(--muted);max-width:520px;margin-bottom:30px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:34px}
+.hero-meta{display:flex;gap:26px;flex-wrap:wrap}
+.hero-meta .m{display:flex;flex-direction:column;gap:2px}
+.hero-meta .m b{font-family:"Sora";font-size:1.5rem;font-weight:700}
+.hero-meta .m span{font-size:.82rem;color:var(--faint);text-transform:uppercase;letter-spacing:.08em}
+
+.hero-card{position:relative;border-radius:26px;padding:30px;background:
+  linear-gradient(160deg,rgba(31,185,120,.16),rgba(35,210,181,.05));border:1px solid var(--line);box-shadow:var(--shadow)}
+.hero-card .court{aspect-ratio:1/1.25;border-radius:18px;background:
+  repeating-linear-gradient(0deg,transparent 0 30px,rgba(255,255,255,.03) 30px 31px),
+  linear-gradient(160deg,#16624a,#0c3b2c);position:relative;border:2px solid rgba(198,255,74,.25);overflow:hidden}
+.court .net{position:absolute;left:0;right:0;top:50%;height:3px;background:rgba(255,255,255,.5);transform:translateY(-50%)}
+.court .line{position:absolute;background:rgba(255,255,255,.4)}
+.court .box{position:absolute;inset:14px;border:2px solid rgba(255,255,255,.35);border-radius:6px}
+.court .mid{position:absolute;left:50%;top:14px;bottom:14px;width:2px;background:rgba(255,255,255,.3);transform:translateX(-50%)}
+.court .ball{position:absolute;width:26px;height:26px;border-radius:50%;
+  background:radial-gradient(circle at 35% 30%,var(--lime),var(--green));box-shadow:0 6px 18px rgba(0,0,0,.4);
+  left:60%;top:30%;animation:bounce 3.2s ease-in-out infinite}
+@keyframes bounce{0%,100%{transform:translate(0,0)}25%{transform:translate(-90px,40px)}50%{transform:translate(20px,120px)}75%{transform:translate(-40px,60px)}}
+.hero-card .tagline{position:absolute;top:18px;left:18px;font-family:"Sora";font-weight:700;font-size:.85rem;
+  background:rgba(8,12,10,.6);backdrop-filter:blur(4px);padding:6px 12px;border-radius:999px}
+
+/* ---------- MARQUEE ---------- */
+.marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;padding:16px 0;background:rgba(255,255,255,.015)}
+.marquee-in{display:flex;gap:46px;white-space:nowrap;animation:scroll 26s linear infinite;font-family:"Sora";font-weight:700;font-size:1.05rem;color:var(--faint)}
+.marquee-in span{display:flex;align-items:center;gap:46px}
+.marquee-in b{color:var(--lime)}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* ---------- SECTION ---------- */
+section{padding:84px 0}
+.sec-head{max-width:640px;margin-bottom:50px}
+.sec-head h2{font-size:clamp(2rem,4vw,2.9rem);font-weight:800;margin:14px 0 14px}
+.sec-head p{color:var(--muted);font-size:1.08rem}
+
+/* ---------- ABOUT / CONCEPT ---------- */
+.concept{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.cc{padding:30px 26px;border-radius:var(--r);border:1px solid var(--line);background:var(--panel);transition:.25s}
+.cc:hover{transform:translateY(-4px);border-color:rgba(198,255,74,.3)}
+.cc .ic{width:50px;height:50px;border-radius:14px;display:grid;place-items:center;font-size:1.5rem;margin-bottom:18px;
+  background:linear-gradient(135deg,rgba(198,255,74,.18),rgba(35,210,181,.12))}
+.cc h3{font-size:1.25rem;margin-bottom:10px}
+.cc p{color:var(--muted);font-size:.98rem}
+
+/* ---------- EVENTS ---------- */
+.events{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.ev{position:relative;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);background:var(--panel);
+  display:flex;flex-direction:column;cursor:pointer;transition:.28s}
+.ev:hover{transform:translateY(-6px);border-color:rgba(198,255,74,.4);box-shadow:var(--shadow)}
+.ev-top{height:150px;position:relative;display:grid;place-items:center;font-size:3.4rem}
+.ev-top.t1{background:linear-gradient(150deg,#1a6b4f,#0c3f2e)}
+.ev-top.t2{background:linear-gradient(150deg,#2b5fa8,#15294a)}
+.ev-top.t3{background:linear-gradient(150deg,#7a5cc4,#3a2566)}
+.ev-tag{position:absolute;top:14px;left:14px;font-size:.74rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  background:rgba(8,12,10,.55);backdrop-filter:blur(4px);padding:6px 12px;border-radius:999px;color:#fff}
+.ev-price{position:absolute;top:14px;right:14px;font-family:"Sora";font-weight:700;font-size:.95rem;
+  background:rgba(8,12,10,.55);padding:6px 12px;border-radius:999px}
+.ev-body{padding:24px 22px;flex:1;display:flex;flex-direction:column}
+.ev-body h3{font-size:1.32rem;margin-bottom:8px}
+.ev-time{font-size:.85rem;color:var(--lime);font-weight:600;margin-bottom:12px;display:flex;align-items:center;gap:7px}
+.ev-body p{color:var(--muted);font-size:.95rem;flex:1;margin-bottom:18px}
+.ev-foot{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.ev-spots{font-size:.82rem;color:var(--faint)}
+.ev-foot .btn{padding:10px 18px;font-size:.9rem}
+.ev-combo{margin-top:26px;border-radius:var(--r);padding:26px 30px;display:flex;align-items:center;justify-content:space-between;
+  gap:20px;flex-wrap:wrap;border:1px dashed rgba(198,255,74,.4);background:linear-gradient(100deg,rgba(198,255,74,.08),rgba(35,210,181,.05))}
+.ev-combo h3{font-size:1.35rem;margin-bottom:4px}
+.ev-combo p{color:var(--muted);font-size:.95rem}
+.ev-combo .price{font-family:"Sora";font-weight:800;font-size:1.8rem}
+.ev-combo .price s{color:var(--faint);font-size:1.05rem;font-weight:500;margin-right:8px}
+
+/* ---------- AGENDA ---------- */
+.agenda{display:flex;flex-direction:column;gap:0}
+.ag{display:grid;grid-template-columns:120px 1fr;gap:24px;padding:24px 0;border-bottom:1px solid var(--line);align-items:start}
+.ag:last-child{border-bottom:0}
+.ag .t{font-family:"Sora";font-weight:700;font-size:1.05rem;color:var(--lime)}
+.ag h4{font-size:1.2rem;margin-bottom:6px}
+.ag p{color:var(--muted);font-size:.96rem}
+.ag .chip{display:inline-block;margin-top:8px;font-size:.74rem;padding:4px 11px;border-radius:999px;border:1px solid var(--line);color:var(--faint)}
+
+/* ---------- SPEAKER ---------- */
+.speaker{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:center;
+  background:var(--panel);border:1px solid var(--line);border-radius:26px;padding:36px;box-shadow:var(--shadow)}
+.speaker .ph{aspect-ratio:1;border-radius:20px;background:linear-gradient(150deg,#2b5fa8,#15294a);
+  display:grid;place-items:center;font-size:5rem}
+.speaker h3{font-size:1.9rem;margin-bottom:6px}
+.speaker .role{color:var(--lime);font-weight:600;margin-bottom:16px}
+.speaker p{color:var(--muted);margin-bottom:14px}
+.speaker ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.speaker li{display:flex;gap:10px;color:var(--muted);font-size:.96rem}
+.speaker li::before{content:"✦";color:var(--lime)}
+
+/* ---------- FAQ ---------- */
+.faq{max-width:780px;margin:0 auto}
+.fq{border:1px solid var(--line);border-radius:14px;margin-bottom:12px;background:var(--panel);overflow:hidden}
+.fq summary{padding:18px 22px;cursor:pointer;font-weight:600;font-family:"Sora";display:flex;justify-content:space-between;align-items:center;list-style:none;font-size:1.02rem}
+.fq summary::-webkit-details-marker{display:none}
+.fq summary::after{content:"+";font-size:1.4rem;color:var(--lime);transition:.2s}
+.fq[open] summary::after{transform:rotate(45deg)}
+.fq p{padding:0 22px 20px;color:var(--muted)}
+
+/* ---------- CTA FINAL ---------- */
+.final{text-align:center;border-radius:30px;padding:64px 30px;
+  background:linear-gradient(120deg,rgba(31,185,120,.2),rgba(35,210,181,.1));border:1px solid var(--line);box-shadow:var(--shadow)}
+.final h2{font-size:clamp(2rem,4.4vw,3rem);font-weight:800;margin-bottom:16px}
+.final p{color:var(--muted);font-size:1.1rem;max-width:480px;margin:0 auto 28px}
+
+/* ---------- FOOTER ---------- */
+footer{border-top:1px solid var(--line);padding:46px 0 40px;margin-top:60px}
+.foot-in{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:center}
+.foot-in p{color:var(--faint);font-size:.9rem}
+.foot-links{display:flex;gap:22px}
+.foot-links a{color:var(--muted);font-size:.92rem}
+.foot-links a:hover{color:var(--lime)}
+
+/* ---------- MODAL ---------- */
+.overlay{position:fixed;inset:0;background:rgba(4,7,6,.78);backdrop-filter:blur(6px);z-index:100;
+  display:none;align-items:flex-start;justify-content:center;padding:40px 18px;overflow-y:auto}
+.overlay.show{display:flex}
+.modal{width:100%;max-width:520px;background:var(--bg2);border:1px solid var(--line);border-radius:24px;
+  box-shadow:var(--shadow);overflow:hidden;animation:rise .3s ease}
+@keyframes rise{from{transform:translateY(20px);opacity:0}to{transform:translateY(0);opacity:1}}
+.modal-head{padding:24px 26px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:flex-start;gap:14px;
+  background:linear-gradient(100deg,rgba(198,255,74,.08),transparent)}
+.modal-head h3{font-size:1.3rem;margin-bottom:4px}
+.modal-head .sub{color:var(--muted);font-size:.9rem}
+.close{font-size:1.4rem;color:var(--muted);width:34px;height:34px;border-radius:10px;flex:none}
+.close:hover{background:rgba(255,255,255,.06);color:var(--ink)}
+.modal-body{padding:26px}
+/* steps */
+.steps{display:flex;gap:8px;margin-bottom:24px}
+.steps .s{flex:1;height:5px;border-radius:999px;background:rgba(255,255,255,.1)}
+.steps .s.active{background:linear-gradient(90deg,var(--lime),var(--teal))}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:.84rem;color:var(--muted);margin-bottom:7px;font-weight:500}
+.field input,.field select{width:100%;padding:13px 15px;border-radius:12px;background:var(--panel);
+  border:1px solid var(--line);color:var(--ink);font:inherit;font-size:.96rem;transition:.2s}
+.field input:focus,.field select:focus{outline:0;border-color:var(--lime);background:var(--panel2)}
+.field input::placeholder{color:var(--faint)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.err{color:#ff8a8a;font-size:.8rem;margin-top:6px;display:none}
+.field.invalid input{border-color:#ff6b6b}
+.field.invalid .err{display:block}
+/* summary box */
+.osum{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:20px}
+.osum .li{display:flex;justify-content:space-between;padding:7px 0;font-size:.95rem;color:var(--muted)}
+.osum .li b{color:var(--ink)}
+.osum .tot{border-top:1px solid var(--line);margin-top:8px;padding-top:12px;font-family:"Sora";font-size:1.15rem}
+.osum .tot b{color:var(--lime)}
+/* pay methods */
+.pm{display:flex;gap:10px;margin-bottom:20px}
+.pm label{flex:1;border:1px solid var(--line);border-radius:12px;padding:13px;text-align:center;cursor:pointer;
+  font-size:.88rem;font-weight:600;transition:.2s;color:var(--muted)}
+.pm input{display:none}
+.pm input:checked+label,.pm label:hover{border-color:var(--lime);color:var(--lime);background:rgba(198,255,74,.06)}
+.card-ic{display:flex;gap:6px;justify-content:center;margin-bottom:14px;font-size:1.5rem;opacity:.8}
+.modal-foot{padding:20px 26px;border-top:1px solid var(--line);display:flex;gap:12px}
+.modal-foot .btn{flex:1;justify-content:center}
+.note{font-size:.8rem;color:var(--faint);text-align:center;margin-top:14px}
+.spinner{width:18px;height:18px;border:2px solid rgba(10,21,5,.3);border-top-color:#0a1505;border-radius:50%;animation:spin .7s linear infinite;display:inline-block}
+@keyframes spin{to{transform:rotate(360deg)}}
+/* success */
+.success{text-align:center;padding:10px 0}
+.success .check{width:74px;height:74px;border-radius:50%;margin:0 auto 20px;display:grid;place-items:center;font-size:2.2rem;
+  background:linear-gradient(135deg,var(--lime),var(--green));color:#06210f;animation:pop .4s ease}
+@keyframes pop{0%{transform:scale(.4);opacity:0}100%{transform:scale(1);opacity:1}}
+.success h3{font-size:1.5rem;margin-bottom:10px}
+.success p{color:var(--muted);margin-bottom:20px}
+.ticket{background:var(--panel);border:1px dashed var(--line);border-radius:14px;padding:20px;text-align:left;margin-bottom:8px}
+.ticket .id{font-family:"Sora";font-weight:700;font-size:1.2rem;color:var(--lime);letter-spacing:.04em}
+.ticket .li{display:flex;justify-content:space-between;font-size:.9rem;color:var(--muted);margin-top:8px}
+
+/* toast */
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(120px);z-index:200;
+  background:var(--panel2);border:1px solid var(--lime);color:var(--ink);padding:14px 22px;border-radius:14px;
+  box-shadow:var(--shadow);font-weight:500;transition:.35s;font-size:.94rem}
+.toast.show{transform:translateX(-50%) translateY(0)}
+
+@media(max-width:880px){
+  .hero-grid{grid-template-columns:1fr;gap:36px}
+  .concept,.events{grid-template-columns:1fr}
+  .speaker{grid-template-columns:1fr}
+  .nav-links{display:none}
+  .nav-links.open{display:flex;position:absolute;top:68px;left:0;right:0;flex-direction:column;background:var(--bg2);
+    padding:20px;border-bottom:1px solid var(--line);gap:18px}
+  .menu-btn{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;border:1px solid var(--line);font-size:1.2rem}
+  .ag{grid-template-columns:80px 1fr;gap:14px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="wrap nav-in">
+    <a href="#" class="logo"><span class="dot">⚡</span> Sport <span class="grad">&&nbsp;Connect</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#concepto">Concepto</a>
+      <a href="#eventos">Eventos</a>
+      <a href="#agenda">Agenda</a>
+      <a href="#speaker">Speaker</a>
+      <a href="#faq">FAQ</a>
+      <button class="btn btn-primary" onclick="openModal('combo')">Inscribirme</button>
+    </nav>
+    <button class="menu-btn" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="badge"><span class="pulse"></span> 1ª Edición · Pádel</span>
+      <h1>Donde el deporte <span class="grad">conecta personas</span>.</h1>
+      <p class="lead">Un día para jugar, escuchar y conectar. Torneo de pádel, una charla inspiradora con nuestro speaker y un evento de networking para ampliar tu red. Elegí tu experiencia e inscribite.</p>
+      <div class="hero-cta">
+        <button class="btn btn-primary" onclick="document.getElementById('eventos').scrollIntoView()">Ver eventos →</button>
+        <button class="btn btn-ghost" onclick="openModal('combo')">Quiero el pase completo</button>
+      </div>
+      <div class="hero-meta">
+        <div class="m"><b>15 Ago</b><span>2026</span></div>
+        <div class="m"><b>3</b><span>Experiencias</span></div>
+        <div class="m"><b>+120</b><span>Asistentes</span></div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="court">
+        <span class="tagline">🎾 Center Court</span>
+        <div class="net"></div>
+        <div class="box"></div>
+        <div class="mid"></div>
+        <div class="ball"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee">
+  <div class="marquee-in">
+    <span>🎾 Torneo de Pádel <b>•</b> 🎤 Speaker <b>•</b> 🤝 Networking <b>•</b> 🏆 Premios <b>•</b> 🍹 Afterparty <b>•</b> 📸 Cobertura <b>•</b></span>
+    <span>🎾 Torneo de Pádel <b>•</b> 🎤 Speaker <b>•</b> 🤝 Networking <b>•</b> 🏆 Premios <b>•</b> 🍹 Afterparty <b>•</b> 📸 Cobertura <b>•</b></span>
+  </div>
+</div>
+
+<!-- CONCEPTO -->
+<section id="concepto">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">El concepto</span>
+      <h2>Deporte + Network, en un solo lugar.</h2>
+      <p>No es solo un torneo ni solo un evento de networking. Es un formato donde la cancha rompe el hielo y las conexiones reales suceden naturalmente.</p>
+    </div>
+    <div class="concept">
+      <div class="cc">
+        <div class="ic">🎾</div>
+        <h3>Jugás</h3>
+        <p>Competí en el torneo de pádel sin importar tu nivel. Categorías para que todos disfruten y compitan en igualdad.</p>
+      </div>
+      <div class="cc">
+        <div class="ic">💡</div>
+        <h3>Aprendés</h3>
+        <p>Una charla con un speaker invitado sobre mentalidad, negocios y alto rendimiento. Ideas que se llevan a la cancha y a la vida.</p>
+      </div>
+      <div class="cc">
+        <div class="ic">🤝</div>
+        <h3>Conectás</h3>
+        <p>Evento de networking con bebidas, música y dinámicas para que conozcas gente con tus mismos intereses y objetivos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTOS -->
+<section id="eventos">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Los eventos</span>
+      <h2>Elegí en qué participar.</h2>
+      <p>Hacé clic en cualquier experiencia para inscribirte y reservar tu lugar. Podés sumar una, dos o las tres.</p>
+    </div>
+    <div class="events" id="eventsGrid"></div>
+
+    <!-- COMBO -->
+    <div class="ev-combo">
+      <div>
+        <h3>🔥 Pase Completo</h3>
+        <p>Torneo + Speaker + Networking. La experiencia entera con descuento.</p>
+      </div>
+      <div style="text-align:right">
+        <div class="price"><s>$42.000</s> $34.900</div>
+        <button class="btn btn-primary" style="margin-top:8px" onclick="openModal('combo')">Inscribirme al pase</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AGENDA -->
+<section id="agenda">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">El cronograma</span>
+      <h2>Así se vive el día.</h2>
+    </div>
+    <div class="agenda">
+      <div class="ag"><div class="t">09:00</div><div><h4>Acreditación & Welcome coffee</h4><p>Recibimos a los participantes, entregamos kits y armamos los cuadros del torneo.</p><span class="chip">Todos</span></div></div>
+      <div class="ag"><div class="t">10:00</div><div><h4>🎾 Torneo de Pádel — Fase de grupos</h4><p>Arranca la competencia por categorías. Partidos cortos, mucha adrenalina.</p><span class="chip">Torneo</span></div></div>
+      <div class="ag"><div class="t">13:00</div><div><h4>Almuerzo & pausa activa</h4><p>Food trucks, hidratación y un momento para recargar energías.</p><span class="chip">Todos</span></div></div>
+      <div class="ag"><div class="t">15:00</div><div><h4>🎤 Charla con el Speaker</h4><p>Mentalidad ganadora, negocios y rendimiento. 45 min de charla + Q&A.</p><span class="chip">Speaker</span></div></div>
+      <div class="ag"><div class="t">16:30</div><div><h4>🏆 Finales & premiación</h4><p>Las mejores parejas se enfrentan por el título de la 1ª edición.</p><span class="chip">Torneo</span></div></div>
+      <div class="ag"><div class="t">18:00</div><div><h4>🤝 Networking & Afterparty</h4><p>Bebidas, música, dinámicas de conexión y cierre a pura buena onda.</p><span class="chip">Networking</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SPEAKER -->
+<section id="speaker">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">El invitado</span>
+      <h2>Una charla que te cambia el partido.</h2>
+    </div>
+    <div class="speaker">
+      <div class="ph">🎤</div>
+      <div>
+        <h3>Speaker Invitado</h3>
+        <div class="role">Referente en mentalidad & alto rendimiento</div>
+        <p>Una charla pensada para deportistas, emprendedores y profesionales que quieren rendir más sin quemarse. Herramientas concretas que funcionan dentro y fuera de la cancha.</p>
+        <ul>
+          <li>Cómo construir hábitos de alto rendimiento</li>
+          <li>Mentalidad bajo presión: ganar el punto importante</li>
+          <li>Networking con propósito: relaciones que suman</li>
+        </ul>
+        <button class="btn btn-primary" style="margin-top:22px" onclick="openModal('speaker')">Reservar mi lugar en la charla</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head" style="margin:0 auto 40px;text-align:center">
+      <span class="eyebrow">Dudas frecuentes</span>
+      <h2>Antes de inscribirte.</h2>
+    </div>
+    <div class="faq">
+      <details class="fq"><summary>¿Necesito tener experiencia en pádel?</summary><p>No. Hay categorías por nivel y también podés venir solo al speaker o al networking sin jugar.</p></details>
+      <details class="fq"><summary>¿Puedo inscribirme solo a una parte?</summary><p>Sí. Cada experiencia se inscribe por separado, o podés sumar el Pase Completo con descuento.</p></details>
+      <details class="fq"><summary>¿Cómo es el pago?</summary><p>Online con tarjeta o MercadoPago al momento de inscribirte. Recibís tu ticket con un código de confirmación.</p></details>
+      <details class="fq"><summary>¿Qué incluye el torneo?</summary><p>Kit de participante, partidos por categoría, hidratación y premios para los ganadores.</p></details>
+      <details class="fq"><summary>¿Puedo transferir mi entrada?</summary><p>Sí, escribinos hasta 48hs antes del evento y reasignamos tu lugar a otra persona.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section>
+  <div class="wrap">
+    <div class="final">
+      <span class="eyebrow">No te lo pierdas</span>
+      <h2>Tu próxima conexión está <span class="grad">en la cancha</span>.</h2>
+      <p>Lugares limitados para la 1ª edición. Asegurá el tuyo hoy.</p>
+      <button class="btn btn-primary" onclick="openModal('combo')">Inscribirme ahora</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap foot-in">
+    <a href="#" class="logo"><span class="dot">⚡</span> Sport <span class="grad">&&nbsp;Connect</span></a>
+    <div class="foot-links">
+      <a href="#eventos">Eventos</a>
+      <a href="#agenda">Agenda</a>
+      <a href="#faq">FAQ</a>
+      <a href="mailto:diogenessortiz@gmail.com">Contacto</a>
+    </div>
+    <p>© 2026 Sport & Connect · 1ª Edición Pádel</p>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="overlay" id="overlay">
+  <div class="modal">
+    <div class="modal-head">
+      <div>
+        <h3 id="mTitle">Inscripción</h3>
+        <div class="sub" id="mSub">Completá tus datos</div>
+      </div>
+      <button class="close" onclick="closeModal()">✕</button>
+    </div>
+    <div class="modal-body" id="mBody"></div>
+    <div class="modal-foot" id="mFoot"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ---------- DATA ---------- */
+const EVENTS = {
+  torneo:{ id:'torneo', emoji:'🎾', tag:'Torneo', cls:'t1', title:'Torneo de Pádel',
+    time:'10:00 – 17:00 hs', price:18000, spots:'48 lugares · por parejas',
+    desc:'Competí por categorías sin importar tu nivel. Incluye kit, partidos, hidratación y premios para los ganadores.' },
+  speaker:{ id:'speaker', emoji:'🎤', tag:'Charla', cls:'t2', title:'Speaker · La Charla',
+    time:'15:00 – 16:00 hs', price:9000, spots:'80 lugares · butaca',
+    desc:'Charla sobre mentalidad, alto rendimiento y negocios con nuestro speaker invitado. 45 min + Q&A.' },
+  networking:{ id:'networking', emoji:'🤝', tag:'Networking', cls:'t3', title:'Evento de Networking',
+    time:'18:00 – 21:00 hs', price:15000, spots:'120 lugares · open',
+    desc:'Afterparty con bebidas, música y dinámicas para conectar con gente afín. La parte más esperada del día.' },
+  combo:{ id:'combo', emoji:'🔥', tag:'Pase Completo', cls:'t1', title:'Pase Completo',
+    time:'09:00 – 21:00 hs', price:34900, spots:'Cupos limitados',
+    desc:'Torneo + Speaker + Networking. Toda la experiencia con descuento.' }
+};
+const money = n => '$'+n.toLocaleString('es-AR');
+
+/* ---------- RENDER EVENT CARDS ---------- */
+const grid = document.getElementById('eventsGrid');
+['torneo','speaker','networking'].forEach(k=>{
+  const e = EVENTS[k];
+  const card = document.createElement('div');
+  card.className='ev';
+  card.onclick = ()=>openModal(k);
+  card.innerHTML = `
+    <div class="ev-top ${e.cls}">${e.emoji}
+      <span class="ev-tag">${e.tag}</span>
+      <span class="ev-price">${money(e.price)}</span>
+    </div>
+    <div class="ev-body">
+      <h3>${e.title}</h3>
+      <div class="ev-time">🕐 ${e.time}</div>
+      <p>${e.desc}</p>
+      <div class="ev-foot">
+        <span class="ev-spots">${e.spots}</span>
+        <button class="btn btn-primary" onclick="event.stopPropagation();openModal('${k}')">Inscribirme</button>
+      </div>
+    </div>`;
+  grid.appendChild(card);
+});
+
+/* ---------- MODAL FLOW ---------- */
+let current=null, step=1, payMethod='card';
+const overlay=document.getElementById('overlay');
+const body=document.getElementById('mBody');
+const foot=document.getElementById('mFoot');
+
+function openModal(key){
+  current=EVENTS[key]; step=1; payMethod='card';
+  overlay.classList.add('show');
+  document.body.style.overflow='hidden';
+  renderStep();
+}
+function closeModal(){
+  overlay.classList.remove('show');
+  document.body.style.overflow='';
+}
+overlay.addEventListener('click',e=>{ if(e.target===overlay) closeModal(); });
+
+function bar(){ return `<div class="steps">
+  <div class="s ${step>=1?'active':''}"></div>
+  <div class="s ${step>=2?'active':''}"></div>
+  <div class="s ${step>=3?'active':''}"></div></div>`; }
+
+function renderStep(){
+  document.getElementById('mTitle').textContent = current.title;
+  if(step===1){ renderData(); }
+  else if(step===2){ renderPay(); }
+  else { renderSuccess(); }
+}
+
+/* STEP 1 — DATA */
+function renderData(){
+  document.getElementById('mSub').textContent='Paso 1 de 3 · Tus datos';
+  let extra='';
+  if(current.id==='torneo'){
+    extra = `<div class="field"><label>Categoría / nivel</label>
+      <select id="f_cat"><option>Iniciación</option><option>Intermedio</option><option>Avanzado</option><option>Libre</option></select></div>
+      <div class="field"><label>Nombre de tu compañero/a de pareja</label>
+      <input id="f_partner" placeholder="Opcional · te asignamos uno si venís solo/a"></div>`;
+  }
+  body.innerHTML = bar() + `
+    <div class="row2">
+      <div class="field"><label>Nombre</label><input id="f_name" placeholder="Tu nombre"><div class="err">Ingresá tu nombre</div></div>
+      <div class="field"><label>Apellido</label><input id="f_last" placeholder="Tu apellido"><div class="err">Ingresá tu apellido</div></div>
+    </div>
+    <div class="field"><label>Email</label><input id="f_email" type="email" placeholder="tu@email.com"><div class="err">Email inválido</div></div>
+    <div class="field"><label>WhatsApp</label><input id="f_phone" placeholder="+54 9 11 ..."><div class="err">Ingresá un teléfono</div></div>
+    ${extra}`;
+  foot.innerHTML = `<button class="btn btn-ghost" onclick="closeModal()">Cancelar</button>
+    <button class="btn btn-primary" onclick="toPay()">Continuar al pago →</button>`;
+  // prefill
+  const saved=JSON.parse(localStorage.getItem('mn_user')||'{}');
+  ['name','last','email','phone'].forEach(k=>{ if(saved[k]) document.getElementById('f_'+k).value=saved[k]; });
+}
+
+function val(id){ return (document.getElementById(id)?.value||'').trim(); }
+function invalid(id,bad){ document.getElementById(id).closest('.field').classList.toggle('invalid',bad); return bad; }
+
+let order={};
+function toPay(){
+  const name=val('f_name'),last=val('f_last'),email=val('f_email'),phone=val('f_phone');
+  let bad=false;
+  bad = invalid('f_name',!name) || bad;
+  bad = invalid('f_last',!last) || bad;
+  bad = invalid('f_email',!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) || bad;
+  bad = invalid('f_phone',phone.length<6) || bad;
+  if(bad){ toast('Revisá los campos marcados'); return; }
+  localStorage.setItem('mn_user',JSON.stringify({name,last,email,phone}));
+  order={ event:current.title, eventId:current.id, name:name+' '+last, email, phone, price:current.price,
+    cat: val('f_cat')||null, partner: val('f_partner')||null };
+  step=2; renderStep();
+}
+
+/* STEP 2 — PAY */
+function renderPay(){
+  document.getElementById('mSub').textContent='Paso 2 de 3 · Pago seguro';
+  const fee = Math.round(current.price*0.05);
+  const total = current.price+fee;
+  order.total=total;
+  body.innerHTML = bar() + `
+    <div class="osum">
+      <div class="li"><span>${current.title}</span><b>${money(current.price)}</b></div>
+      <div class="li"><span>Costo de servicio</span><b>${money(fee)}</b></div>
+      <div class="li tot"><span>Total</span><b>${money(total)}</b></div>
+    </div>
+    <div class="pm">
+      <input type="radio" name="pm" id="pm_card" value="card" checked onchange="payMethod='card';drawPayFields()">
+      <label for="pm_card">💳 Tarjeta</label>
+      <input type="radio" name="pm" id="pm_mp" value="mp" onchange="payMethod='mp';drawPayFields()">
+      <label for="pm_mp">🔵 MercadoPago</label>
+    </div>
+    <div id="payFields"></div>`;
+  foot.innerHTML = `<button class="btn btn-ghost" onclick="step=1;renderStep()">← Volver</button>
+    <button class="btn btn-primary" id="payBtn" onclick="pay()">Pagar ${money(total)}</button>`;
+  drawPayFields();
+}
+function drawPayFields(){
+  const pf=document.getElementById('payFields');
+  if(payMethod==='card'){
+    pf.innerHTML = `
+      <div class="card-ic">💳 🟠 🔵 💠</div>
+      <div class="field"><label>Número de tarjeta</label><input id="c_num" inputmode="numeric" placeholder="1234 5678 9012 3456" maxlength="19" oninput="fmtCard(this)"></div>
+      <div class="field"><label>Titular</label><input id="c_name" placeholder="Como figura en la tarjeta"></div>
+      <div class="row2">
+        <div class="field"><label>Vencimiento</label><input id="c_exp" placeholder="MM/AA" maxlength="5" oninput="fmtExp(this)"></div>
+        <div class="field"><label>CVV</label><input id="c_cvv" inputmode="numeric" placeholder="123" maxlength="4"></div>
+      </div>`;
+  } else {
+    pf.innerHTML = `<div class="osum" style="text-align:center">
+      <div style="font-size:2.4rem;margin-bottom:10px">🔵</div>
+      <p style="color:var(--muted);font-size:.94rem">Vas a pagar con tu cuenta de MercadoPago. Al confirmar te redirigimos para completar el pago de forma segura.</p>
+      </div>`;
+  }
+}
+function fmtCard(el){ el.value=el.value.replace(/\D/g,'').replace(/(.{4})/g,'$1 ').trim(); }
+function fmtExp(el){ let v=el.value.replace(/\D/g,''); if(v.length>=3) v=v.slice(0,2)+'/'+v.slice(2,4); el.value=v; }
+
+function pay(){
+  if(payMethod==='card'){
+    const num=val('c_num').replace(/\s/g,'');
+    if(num.length<15 || !val('c_name') || val('c_exp').length<5 || val('c_cvv').length<3){
+      toast('Completá los datos de la tarjeta'); return;
+    }
+  }
+  const btn=document.getElementById('payBtn');
+  btn.innerHTML='<span class="spinner"></span> Procesando...';
+  btn.disabled=true;
+  // Simulación de pago. Reemplazá esto por tu integración real (MercadoPago / Stripe).
+  setTimeout(()=>{
+    order.id='SC-'+Math.random().toString(36).slice(2,7).toUpperCase()+'-'+(Date.now()%10000);
+    order.date=new Date().toLocaleString('es-AR',{day:'2-digit',month:'short',hour:'2-digit',minute:'2-digit'});
+    const all=JSON.parse(localStorage.getItem('mn_orders')||'[]'); all.push(order);
+    localStorage.setItem('mn_orders',JSON.stringify(all));
+    step=3; renderStep();
+  },1700);
+}
+
+/* STEP 3 — SUCCESS */
+function renderSuccess(){
+  document.getElementById('mSub').textContent='Paso 3 de 3 · ¡Listo!';
+  body.innerHTML = `<div class="success">
+    <div class="check">✓</div>
+    <h3>¡Inscripción confirmada!</h3>
+    <p>Te enviamos los detalles a <b>${order.email}</b>. Guardá tu código de confirmación.</p>
+    <div class="ticket">
+      <div class="id">${order.id}</div>
+      <div class="li"><span>Experiencia</span><b style="color:var(--ink)">${order.event}</b></div>
+      <div class="li"><span>A nombre de</span><b style="color:var(--ink)">${order.name}</b></div>
+      ${order.cat?`<div class="li"><span>Categoría</span><b style="color:var(--ink)">${order.cat}</b></div>`:''}
+      <div class="li"><span>Total pagado</span><b style="color:var(--lime)">${money(order.total)}</b></div>
+      <div class="li"><span>Fecha</span><b style="color:var(--ink)">${order.date}</b></div>
+    </div>
+  </div>`;
+  foot.innerHTML = `<button class="btn btn-ghost" onclick="closeModal()">Cerrar</button>
+    <button class="btn btn-primary" onclick="closeModal();toast('¡Nos vemos en la cancha! 🎾')">Sumar otra experiencia</button>`;
+}
+
+/* ---------- TOAST ---------- */
+let toastT;
+function toast(msg){
+  const t=document.getElementById('toast');
+  t.textContent=msg; t.classList.add('show');
+  clearTimeout(toastT); toastT=setTimeout(()=>t.classList.remove('show'),2600);
+}
+document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeModal(); });
+</script>
+</body>
+</html>
