@@ -82,6 +82,9 @@ header.nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(16px);
 .hero-meta .m:last-child{border-right:0;margin-right:0;padding-right:0}
 .hero-meta .m b{font-family:var(--serif);font-size:1.9rem;font-weight:600;color:var(--gold)}
 .hero-meta .m span{font-size:.66rem;color:var(--faint);text-transform:uppercase;letter-spacing:.18em}
+.hero-support{display:flex;align-items:center;gap:13px;margin-top:30px}
+.hero-support span{font-size:.55rem;letter-spacing:.24em;text-transform:uppercase;color:var(--faint);white-space:nowrap}
+.hero-support img{height:32px;width:auto;filter:brightness(0) invert(1);opacity:.68}
 
 .hero-card{position:relative;border-radius:6px;padding:34px;background:
   linear-gradient(160deg,rgba(26,122,79,.2),rgba(10,61,39,.35));border:1px solid var(--line);box-shadow:var(--shadow)}
@@ -177,7 +180,7 @@ section{padding:96px 0}
 /* ---------- SUPPORTED BY / SPONSORS ---------- */
 .sponsors{text-align:center}
 .supported{display:flex;justify-content:center;margin-bottom:44px}
-.sup-logo{height:96px;width:auto;max-width:100%;filter:brightness(0) invert(1);opacity:.92}
+.sup-logo{height:60px;width:auto;max-width:100%;filter:brightness(0) invert(1);opacity:.8}
 .sup-plate{background:#fff;border-radius:6px;padding:32px 60px;display:grid;place-items:center;
   box-shadow:var(--shadow);border:1px solid rgba(198,162,83,.45)}
 .sup-plate img{height:72px;width:auto;max-width:100%}
@@ -335,6 +338,10 @@ footer{border-top:1px solid var(--line);padding:56px 0 48px;margin-top:70px}
         <div class="m"><b>15 Ago</b><span>2026</span></div>
         <div class="m"><b>Lasaigues</b><span>Padel · Unicenter</span></div>
         <div class="m"><b>17 hs</b><span>4 horas de evento</span></div>
+      </div>
+      <div class="hero-support">
+        <span>Supported by</span>
+        <img src="img/universidad-san-andres.png" alt="Universidad de San Andrés">
       </div>
     </div>
     <div class="hero-card">
@@ -521,12 +528,9 @@ footer{border-top:1px solid var(--line);padding:56px 0 48px;margin-top:70px}
 </section>
 
 <!-- SUPPORTED BY -->
-<section id="supported">
+<section id="supported" style="padding:66px 0">
   <div class="wrap sponsors">
-    <div class="sec-head center" style="margin-bottom:34px">
-      <span class="eyebrow">Supported by</span>
-      <h2>Con el apoyo de.</h2>
-    </div>
+    <span class="eyebrow" style="display:block;margin-bottom:26px;opacity:.85">Supported by</span>
     <div class="supported" style="margin-bottom:0">
       <img class="sup-logo" src="img/universidad-san-andres.png" alt="Universidad de San Andrés">
     </div>
