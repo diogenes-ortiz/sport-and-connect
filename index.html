@@ -608,8 +608,8 @@ function renderData(){
     <div class="row2">
       <div class="field"><label>¿Jugás el torneo?</label>
         <select id="f_play"><option value="Sí, juego el torneo">Sí, juego el torneo</option><option value="Solo charla y networking">Solo charla y networking</option></select></div>
-      <div class="field"><label>Categoría / nivel</label>
-        <select id="f_cat"><option>Iniciación</option><option>Intermedio</option><option>Avanzado</option><option>Libre</option></select></div>
+      <div class="field"><label>¿Qué categoría de pádel tenés?</label>
+        <select id="f_cat"><option>Principiante</option><option>8va</option><option>7ma</option><option>6ta</option><option>5ta</option><option>4ta</option><option>3ra</option><option>2da</option><option>1ra</option><option>Sin categoría</option></select></div>
     </div>
     <div class="field"><label>Compañero/a de pareja (torneo mixto)</label>
       <input id="f_partner" placeholder="Opcional · te asignamos pareja si venís solo/a"></div>`;
@@ -704,8 +704,8 @@ function renderSuccess(){
   document.getElementById('mSub').textContent='Paso 3 de 3 · Confirmado';
   body.innerHTML = `<div class="success">
     <div class="check">✓</div>
-    <h3>Entrada confirmada</h3>
-    <p>Te enviamos los detalles a <b style="color:var(--ink)">${order.email}</b>. Guardá tu código de confirmación.</p>
+    <h3>¡Gracias por reservar tu lugar!</h3>
+    <p>Te esperamos en el evento. Te enviamos los detalles a <b style="color:var(--ink)">${order.email}</b> · guardá tu código de confirmación.</p>
     <div class="ticket">
       <div class="id">${order.id}</div>
       <div class="li"><span>Entrada</span><b style="color:var(--ink)">Jornada completa</b></div>
