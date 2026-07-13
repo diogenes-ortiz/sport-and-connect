@@ -55,6 +55,12 @@ header.nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(16px);
 .btn-ghost{border:1px solid var(--gold-soft);color:var(--gold);background:transparent}
 .btn-ghost:hover{background:rgba(198,162,83,.08);border-color:var(--gold)}
 .menu-btn{display:none}
+/* ---------- TOP SUPPORTED BAR ---------- */
+.topbar{border-bottom:1px solid var(--line);background:rgba(6,18,12,.55)}
+.topbar-in{display:flex;align-items:center;justify-content:center;gap:15px;height:50px}
+.tb-label{font-size:.58rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-weight:500}
+.tb-plate{background:#fff;border-radius:4px;padding:5px 13px;display:inline-flex;align-items:center}
+.tb-plate img{height:24px;width:auto;display:block}
 
 /* ---------- HERO ---------- */
 .hero{position:relative;padding:90px 0 78px;overflow:hidden}
@@ -297,6 +303,14 @@ footer{border-top:1px solid var(--line);padding:56px 0 48px;margin-top:70px}
 </head>
 <body>
 
+<!-- TOP SUPPORTED BAR -->
+<div class="topbar">
+  <div class="wrap topbar-in">
+    <span class="tb-label">Supported by</span>
+    <span class="tb-plate"><img src="img/universidad-san-andres.png" alt="Universidad de San Andrés"></span>
+  </div>
+</div>
+
 <!-- NAV -->
 <header class="nav">
   <div class="wrap nav-in">
@@ -320,11 +334,6 @@ footer{border-top:1px solid var(--line);padding:56px 0 48px;margin-top:70px}
       <span class="badge"><span class="pulse"></span> Primera Edición · Pádel</span>
       <h1>Un evento. <span class="grad">Tres</span> experiencias.</h1>
       <p class="lead">Torneo de pádel mixto, una charla con nuestro speaker invitado y un evento de networking. Todo en una jornada, con una sola entrada.</p>
-      <div class="hero-feats">
-        <span class="f"><b>◆</b> Torneo mixto</span>
-        <span class="f"><b>◆</b> Estacionamiento gratuito</span>
-        <span class="f"><b>◆</b> Una sola entrada</span>
-      </div>
       <div class="hero-cta">
         <button class="btn btn-primary" onclick="openModal()">Reservar mi entrada</button>
         <button class="btn btn-ghost" onclick="document.getElementById('incluye').scrollIntoView()">Qué incluye</button>
@@ -403,8 +412,22 @@ footer{border-top:1px solid var(--line);padding:56px 0 48px;margin-top:70px}
         </div>
       </div>
     </div>
-    <div class="ev-cta">
-      <button class="btn btn-primary" onclick="openModal()">Reservar mi lugar</button>
+    <div class="price-wrap" style="margin-top:48px">
+      <div class="price-left">
+        <span class="eyebrow">La entrada</span>
+        <h3 style="margin-top:14px">Entrada General</h3>
+        <div class="p-sub">Una sola entrada · acceso a todo el evento</div>
+        <ul>
+          <li>Las tres experiencias de la jornada</li>
+          <li>Estacionamiento gratuito en el predio</li>
+          <li>Kit de participante, hidratación y cobertura</li>
+        </ul>
+      </div>
+      <div class="price-right">
+        <div class="amt">$34.900<small>por persona · entrada única</small></div>
+        <button class="btn btn-primary" onclick="openModal()">Reservar mi lugar</button>
+        <div class="fine">Cupos limitados · pago seguro online</div>
+      </div>
     </div>
   </div>
 </section>
@@ -476,57 +499,6 @@ footer{border-top:1px solid var(--line);padding:56px 0 48px;margin-top:70px}
   </div>
 </section>
 
-<!-- SPONSORS -->
-<section id="sponsors">
-  <div class="wrap sponsors">
-    <div class="sec-head center">
-      <span class="eyebrow">Supported by · Apoyado por</span>
-      <h2>Con el apoyo de.</h2>
-    </div>
-    <div class="supported">
-      <div class="sup-plate">
-        <img src="img/universidad-san-andres.png" alt="Universidad de San Andrés">
-      </div>
-    </div>
-    <p class="sup-more">Sumá tu marca</p>
-    <div class="logos">
-      <!-- Reemplazá cada caja por <img src="img/logo.png" alt="Marca"> -->
-      <div class="logo-box">Tu logo</div>
-      <div class="logo-box">Tu logo</div>
-      <div class="logo-box">Tu logo</div>
-      <div class="logo-box">Tu logo</div>
-    </div>
-  </div>
-</section>
-
-<!-- PRECIO / ENTRADA -->
-<section id="entrada">
-  <div class="wrap">
-    <div class="sec-head center">
-      <span class="eyebrow">La entrada</span>
-      <h2>Una entrada, toda la experiencia.</h2>
-    </div>
-    <div class="price-wrap">
-      <div class="price-left">
-        <h3>Entrada General</h3>
-        <div class="p-sub">Acceso a la jornada completa</div>
-        <ul>
-          <li>Torneo de pádel mixto + kit de participante</li>
-          <li>La Charla con el speaker invitado</li>
-          <li>Evento de networking con cóctel</li>
-          <li>Estacionamiento gratuito en el predio</li>
-          <li>Hidratación y cobertura del evento</li>
-        </ul>
-      </div>
-      <div class="price-right">
-        <div class="amt">$34.900<small>por persona · entrada única</small></div>
-        <button class="btn btn-primary" onclick="openModal()">Reservar mi entrada</button>
-        <div class="fine">Cupos limitados · pago seguro online</div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- FAQ -->
 <section id="faq">
   <div class="wrap">
@@ -535,7 +507,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 48px;margin-top:70px}
       <h2>Antes de inscribirte.</h2>
     </div>
     <div class="faq">
-      <details class="fq"><summary>¿La entrada incluye todo?</summary><p>Sí. Es una sola entrada que da acceso a las tres experiencias: el torneo de pádel mixto, la charla con el speaker y el evento de networking. No se compra por partes.</p></details>
+      <details class="fq"><summary>¿La entrada incluye todo?</summary><p>Sí. Es una sola entrada que da acceso a las tres experiencias del evento: el torneo de pádel mixto, la charla con el speaker y el evento de networking.</p></details>
       <details class="fq"><summary>¿Necesito tener experiencia en pádel?</summary><p>No. El torneo es mixto y por categorías según tu nivel. Si preferís, podés disfrutar la charla y el networking igual.</p></details>
       <details class="fq"><summary>¿Hay estacionamiento?</summary><p>Sí, estacionamiento gratuito para todos los asistentes en el predio de la sede.</p></details>
       <details class="fq"><summary>¿Cómo es el pago?</summary><p>Online con tarjeta o MercadoPago al momento de reservar. Recibís tu ticket con un código de confirmación.</p></details>
