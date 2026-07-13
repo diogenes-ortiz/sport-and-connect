@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sport & Connect · Networking + Deporte — 1ª Edición Pádel</title>
-<meta name="description" content="Un día donde el deporte conecta. Torneo de pádel, charla con speaker y evento de networking. Inscribite y asegurá tu lugar.">
+<meta name="description" content="Un evento donde el deporte conecta. Torneo de pádel mixto, charla con speaker y networking. Una sola entrada. Estacionamiento gratuito.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
@@ -37,7 +37,6 @@ h1,h2,h3,h4{font-family:var(--serif);line-height:1.08;letter-spacing:.005em;font
 .wrap{max-width:var(--max);margin:0 auto;padding:0 26px}
 .eyebrow{font-size:.72rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);font-weight:500;font-family:var(--sans)}
 .grad{color:var(--gold);font-style:italic}
-.rule{width:56px;height:1px;background:linear-gradient(90deg,var(--gold),transparent);margin:18px 0 0}
 
 /* ---------- NAV ---------- */
 header.nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(16px);
@@ -45,7 +44,7 @@ header.nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(16px);
 .nav-in{display:flex;align-items:center;justify-content:space-between;height:78px}
 .logo{display:flex;align-items:center;gap:12px;font-family:var(--serif);font-weight:600;font-size:1.5rem;letter-spacing:.02em}
 .logo .crown{width:34px;height:34px;display:grid;place-items:center;color:var(--gold);font-size:1.4rem;line-height:1}
-.nav-links{display:flex;gap:34px;align-items:center}
+.nav-links{display:flex;gap:32px;align-items:center}
 .nav-links a{color:var(--muted);font-size:.76rem;font-weight:400;letter-spacing:.14em;text-transform:uppercase;transition:.25s}
 .nav-links a:hover{color:var(--gold)}
 .btn{display:inline-flex;align-items:center;gap:9px;padding:14px 30px;border-radius:var(--r);font-weight:500;
@@ -58,26 +57,30 @@ header.nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(16px);
 .menu-btn{display:none}
 
 /* ---------- HERO ---------- */
-.hero{position:relative;padding:96px 0 84px;overflow:hidden}
+.hero{position:relative;padding:90px 0 78px;overflow:hidden}
 .hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:60px;align-items:center}
 .badge{display:inline-flex;align-items:center;gap:11px;padding:8px 18px;border-radius:999px;
   border:1px solid var(--line);background:rgba(198,162,83,.05);font-size:.68rem;color:var(--gold);
-  font-weight:500;letter-spacing:.24em;text-transform:uppercase;margin-bottom:30px}
+  font-weight:500;letter-spacing:.24em;text-transform:uppercase;margin-bottom:28px}
 .badge .pulse{width:6px;height:6px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 0 rgba(198,162,83,.6);animation:pulse 2.4s infinite}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(198,162,83,.5)}70%{box-shadow:0 0 0 10px rgba(198,162,83,0)}100%{box-shadow:0 0 0 0 rgba(198,162,83,0)}}
-.hero h1{font-size:clamp(3rem,6.4vw,5.3rem);font-weight:600;margin-bottom:26px;letter-spacing:.01em}
-.hero p.lead{font-size:1.12rem;color:var(--muted);max-width:500px;margin-bottom:38px;font-weight:300}
-.hero-cta{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:46px}
+.hero h1{font-size:clamp(2.9rem,6.2vw,5.1rem);font-weight:600;margin-bottom:24px;letter-spacing:.01em}
+.hero p.lead{font-size:1.12rem;color:var(--muted);max-width:500px;margin-bottom:30px;font-weight:300}
+.hero-feats{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:34px}
+.hero-feats .f{display:inline-flex;align-items:center;gap:8px;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:8px 15px}
+.hero-feats .f b{color:var(--gold);font-weight:500}
+.hero-cta{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:44px}
 .hero-meta{display:flex;gap:0}
-.hero-meta .m{display:flex;flex-direction:column;gap:4px;padding-right:34px;margin-right:34px;border-right:1px solid var(--line)}
+.hero-meta .m{display:flex;flex-direction:column;gap:4px;padding-right:32px;margin-right:32px;border-right:1px solid var(--line)}
 .hero-meta .m:last-child{border-right:0;margin-right:0;padding-right:0}
-.hero-meta .m b{font-family:var(--serif);font-size:2.1rem;font-weight:600;color:var(--gold)}
-.hero-meta .m span{font-size:.68rem;color:var(--faint);text-transform:uppercase;letter-spacing:.18em}
+.hero-meta .m b{font-family:var(--serif);font-size:1.9rem;font-weight:600;color:var(--gold)}
+.hero-meta .m span{font-size:.66rem;color:var(--faint);text-transform:uppercase;letter-spacing:.18em}
 
 .hero-card{position:relative;border-radius:6px;padding:34px;background:
   linear-gradient(160deg,rgba(26,122,79,.2),rgba(10,61,39,.35));border:1px solid var(--line);box-shadow:var(--shadow)}
 .hero-card::after{content:"";position:absolute;inset:12px;border:1px solid rgba(198,162,83,.28);border-radius:3px;pointer-events:none}
-.hero-card .court{aspect-ratio:1/1.22;border-radius:3px;background:
+.hero-card .court{aspect-ratio:1/1.18;border-radius:3px;background:
   repeating-linear-gradient(0deg,transparent 0 32px,rgba(255,255,255,.025) 32px 33px),
   linear-gradient(160deg,#0f5236,#0a3325);position:relative;border:1px solid rgba(198,162,83,.35);overflow:hidden}
 .court .net{position:absolute;left:0;right:0;top:50%;height:1px;background:rgba(230,220,190,.5);transform:translateY(-50%)}
@@ -100,51 +103,38 @@ header.nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(16px);
 @keyframes scroll{to{transform:translateX(-50%)}}
 
 /* ---------- SECTION ---------- */
-section{padding:100px 0}
-.sec-head{max-width:660px;margin-bottom:60px}
+section{padding:96px 0}
+.sec-head{max-width:660px;margin-bottom:56px}
+.sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
 .sec-head h2{font-size:clamp(2.3rem,4.6vw,3.5rem);font-weight:600;margin:18px 0 0}
 .sec-head p{color:var(--muted);font-size:1.08rem;font-weight:300;margin-top:20px}
 
-/* ---------- CONCEPT ---------- */
+/* ---------- INCLUYE ---------- */
 .concept{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line)}
 .cc{padding:44px 34px 40px;border-bottom:1px solid var(--line);border-right:1px solid var(--line);transition:.3s}
 .cc:last-child{border-right:0}
 .cc:hover{background:rgba(198,162,83,.03)}
-.cc .num{font-family:var(--serif);font-size:2rem;color:var(--gold);font-style:italic;margin-bottom:22px;font-weight:500}
-.cc h3{font-size:1.7rem;margin-bottom:14px;font-weight:600}
+.cc .num{font-family:var(--serif);font-size:2rem;color:var(--gold);font-style:italic;margin-bottom:20px;font-weight:500}
+.cc h3{font-size:1.7rem;margin-bottom:6px;font-weight:600}
+.cc .cc-when{font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);margin-bottom:14px}
 .cc p{color:var(--muted);font-size:.98rem;font-weight:300}
 
-/* ---------- EVENTS ---------- */
-.events{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-.ev{position:relative;border-radius:5px;overflow:hidden;border:1px solid var(--line);background:var(--panel);
-  display:flex;flex-direction:column;cursor:pointer;transition:.32s}
-.ev:hover{transform:translateY(-6px);border-color:var(--gold-soft);box-shadow:var(--shadow)}
-.ev-top{height:172px;position:relative;display:grid;place-items:center;
-  background:linear-gradient(160deg,#0f5236,#0a3325);border-bottom:1px solid rgba(198,162,83,.25)}
-.ev-top .rn{font-family:var(--serif);font-size:3.6rem;font-style:italic;font-weight:500;color:var(--gold);
-  text-shadow:0 2px 20px rgba(0,0,0,.4)}
-.ev-tag{position:absolute;top:16px;left:16px;font-size:.62rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;
-  color:var(--gold);background:rgba(6,18,12,.55);backdrop-filter:blur(4px);padding:6px 13px;border-radius:2px}
-.ev-price{position:absolute;top:16px;right:16px;font-family:var(--serif);font-weight:600;font-size:1.15rem;
-  color:var(--ink);background:rgba(6,18,12,.55);padding:5px 13px;border-radius:2px}
-.ev-body{padding:30px 28px;flex:1;display:flex;flex-direction:column}
-.ev-body h3{font-size:1.65rem;margin-bottom:10px;font-weight:600}
-.ev-time{font-size:.68rem;color:var(--gold);font-weight:500;letter-spacing:.16em;text-transform:uppercase;margin-bottom:16px}
-.ev-body p{color:var(--muted);font-size:.95rem;flex:1;margin-bottom:24px;font-weight:300}
-.ev-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;
-  padding-top:20px;border-top:1px solid var(--line2)}
-.ev-spots{font-size:.72rem;color:var(--faint);letter-spacing:.06em}
-.ev-foot .btn{padding:11px 20px}
-.ev-combo{margin-top:32px;border-radius:5px;padding:38px 42px;display:flex;align-items:center;justify-content:space-between;
-  gap:24px;flex-wrap:wrap;border:1px solid var(--gold-soft);background:linear-gradient(100deg,rgba(198,162,83,.08),rgba(26,122,79,.06))}
-.ev-combo h3{font-size:1.9rem;margin-bottom:6px;font-weight:600}
-.ev-combo p{color:var(--muted);font-size:.98rem;font-weight:300}
-.ev-combo .price{font-family:var(--serif);font-weight:600;font-size:2.3rem;color:var(--gold)}
-.ev-combo .price s{color:var(--faint);font-size:1.15rem;font-weight:400;margin-right:10px}
+/* ---------- GALLERY ---------- */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:14px}
+.glr{position:relative;border-radius:4px;overflow:hidden;border:1px solid var(--line);
+  background:linear-gradient(150deg,#0f5236,#0a2c1e);display:grid;place-items:center}
+.glr::after{content:"";position:absolute;inset:8px;border:1px solid rgba(198,162,83,.22);border-radius:2px}
+.glr img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.glr .cap{position:relative;z-index:1;font-family:var(--serif);font-style:italic;font-size:1.2rem;color:var(--gold);
+  text-align:center;padding:0 14px}
+.glr .cap small{display:block;font-family:var(--sans);font-style:normal;font-size:.56rem;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--faint);margin-top:8px}
+.glr.big{grid-column:span 2;grid-row:span 2}
+.glr.wide{grid-column:span 2}
 
 /* ---------- AGENDA ---------- */
 .agenda{border-top:1px solid var(--line)}
-.ag{display:grid;grid-template-columns:130px 1fr;gap:30px;padding:30px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.ag{display:grid;grid-template-columns:130px 1fr;gap:30px;padding:28px 0;border-bottom:1px solid var(--line);align-items:baseline}
 .ag .t{font-family:var(--serif);font-weight:600;font-size:1.5rem;color:var(--gold)}
 .ag h4{font-size:1.4rem;margin-bottom:8px;font-weight:600}
 .ag p{color:var(--muted);font-size:.96rem;font-weight:300}
@@ -156,14 +146,56 @@ section{padding:100px 0}
   background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:44px;box-shadow:var(--shadow);position:relative}
 .speaker::after{content:"";position:absolute;inset:14px;border:1px solid rgba(198,162,83,.18);border-radius:3px;pointer-events:none}
 .speaker .ph{aspect-ratio:1;border-radius:4px;background:linear-gradient(160deg,#0f5236,#0a3325);
-  display:grid;place-items:center;font-family:var(--serif);font-size:2rem;color:var(--gold);font-style:italic;
-  border:1px solid rgba(198,162,83,.3)}
+  display:grid;place-items:center;font-family:var(--serif);font-size:1.5rem;color:var(--gold);font-style:italic;
+  border:1px solid rgba(198,162,83,.3);position:relative;overflow:hidden}
+.speaker .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .speaker h3{font-size:2.3rem;margin-bottom:8px;font-weight:600}
 .speaker .role{color:var(--gold);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;margin-bottom:22px}
 .speaker p{color:var(--muted);margin-bottom:18px;font-weight:300}
 .speaker ul{list-style:none;display:flex;flex-direction:column;gap:11px}
 .speaker li{display:flex;gap:13px;color:var(--muted);font-size:.98rem;font-weight:300}
 .speaker li::before{content:"—";color:var(--gold)}
+
+/* ---------- LOCATION ---------- */
+.loc{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:stretch}
+.loc-info h3{font-size:2rem;font-weight:600;margin-bottom:6px}
+.loc-info .addr{color:var(--muted);font-weight:300;margin-bottom:26px}
+.loc-feats{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--line)}
+.loc-feat{display:flex;align-items:center;gap:18px;padding:20px 0;border-bottom:1px solid var(--line)}
+.loc-feat .ic{width:44px;height:44px;flex:none;border:1px solid var(--gold-soft);border-radius:3px;display:grid;place-items:center;
+  color:var(--gold);font-size:1.2rem}
+.loc-feat b{display:block;font-size:1.05rem;font-weight:500;font-family:var(--serif)}
+.loc-feat span{font-size:.86rem;color:var(--muted);font-weight:300}
+.loc-map{border-radius:6px;overflow:hidden;border:1px solid var(--line);position:relative;min-height:360px;
+  background:linear-gradient(150deg,#0f5236,#0a2c1e);display:grid;place-items:center}
+.loc-map::after{content:"";position:absolute;inset:10px;border:1px solid rgba(198,162,83,.2);border-radius:3px;pointer-events:none}
+.loc-map iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.loc-map .cap{position:relative;z-index:1;text-align:center;color:var(--gold);font-family:var(--serif);font-style:italic;font-size:1.3rem}
+.loc-map .cap small{display:block;font-family:var(--sans);font-style:normal;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:var(--faint);margin-top:8px}
+
+/* ---------- SPONSORS ---------- */
+.sponsors{text-align:center}
+.logos{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:12px}
+.logo-box{aspect-ratio:16/9;border:1px solid var(--line);border-radius:4px;display:grid;place-items:center;
+  background:rgba(255,255,255,.015);color:var(--faint);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;
+  transition:.25s;position:relative;padding:10px}
+.logo-box:hover{border-color:var(--gold-soft);color:var(--muted)}
+.logo-box img{max-width:78%;max-height:70%;object-fit:contain;filter:grayscale(1) brightness(1.4);opacity:.8}
+
+/* ---------- PRICE ---------- */
+.price-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:0;border:1px solid var(--gold-soft);border-radius:6px;overflow:hidden;
+  background:linear-gradient(120deg,rgba(26,122,79,.14),rgba(10,61,39,.2))}
+.price-left{padding:48px 46px;border-right:1px solid var(--line)}
+.price-left h3{font-size:2rem;font-weight:600;margin-bottom:6px}
+.price-left .p-sub{color:var(--gold);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:26px}
+.price-left ul{list-style:none;display:flex;flex-direction:column;gap:13px}
+.price-left li{display:flex;gap:13px;color:var(--muted);font-size:1rem;font-weight:300}
+.price-left li::before{content:"✓";color:var(--gold);font-weight:600}
+.price-right{padding:48px 46px;display:flex;flex-direction:column;justify-content:center;text-align:center;background:rgba(6,18,12,.3)}
+.price-right .amt{font-family:var(--serif);font-size:3.6rem;font-weight:600;color:var(--gold);line-height:1}
+.price-right .amt small{display:block;font-family:var(--sans);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--faint);margin-top:10px;font-weight:400}
+.price-right .btn{margin-top:28px;width:100%;justify-content:center}
+.price-right .fine{font-size:.72rem;color:var(--faint);margin-top:16px;letter-spacing:.04em}
 
 /* ---------- FAQ ---------- */
 .faq{max-width:820px;margin:0 auto;border-top:1px solid var(--line)}
@@ -176,7 +208,7 @@ section{padding:100px 0}
 .fq p{padding:0 4px 26px;color:var(--muted);font-weight:300;max-width:90%}
 
 /* ---------- CTA FINAL ---------- */
-.final{text-align:center;border-radius:6px;padding:88px 30px;position:relative;
+.final{text-align:center;border-radius:6px;padding:84px 30px;position:relative;
   background:linear-gradient(150deg,rgba(26,122,79,.22),rgba(10,61,39,.28));border:1px solid var(--line);box-shadow:var(--shadow)}
 .final::after{content:"";position:absolute;inset:16px;border:1px solid rgba(198,162,83,.2);border-radius:3px;pointer-events:none}
 .final .eyebrow{display:block;margin-bottom:20px}
@@ -228,10 +260,8 @@ footer{border-top:1px solid var(--line);padding:56px 0 48px;margin-top:70px}
   font-size:.7rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;transition:.22s;color:var(--muted)}
 .pm input{display:none}
 .pm input:checked+label,.pm label:hover{border-color:var(--gold);color:var(--gold);background:rgba(198,162,83,.05)}
-.card-ic{display:flex;gap:8px;justify-content:center;margin-bottom:16px;font-size:1.3rem;opacity:.7}
 .modal-foot{padding:24px 32px;border-top:1px solid var(--line);display:flex;gap:14px}
 .modal-foot .btn{flex:1;justify-content:center}
-.note{font-size:.72rem;color:var(--faint);text-align:center;margin-top:16px;letter-spacing:.04em}
 .spinner{width:16px;height:16px;border:2px solid rgba(20,38,26,.3);border-top-color:#14261a;border-radius:50%;animation:spin .7s linear infinite;display:inline-block}
 @keyframes spin{to{transform:rotate(360deg)}}
 .success{text-align:center;padding:10px 0}
@@ -251,9 +281,15 @@ footer{border-top:1px solid var(--line);padding:56px 0 48px;margin-top:70px}
 
 @media(max-width:880px){
   .hero-grid{grid-template-columns:1fr;gap:44px}
-  .concept,.events{grid-template-columns:1fr}
+  .concept{grid-template-columns:1fr}
   .cc{border-right:0}
+  .gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px}
+  .glr.big{grid-column:span 2;grid-row:span 1}
   .speaker{grid-template-columns:1fr;gap:34px}
+  .loc{grid-template-columns:1fr;gap:28px}
+  .logos{grid-template-columns:repeat(3,1fr)}
+  .price-wrap{grid-template-columns:1fr}
+  .price-left{border-right:0;border-bottom:1px solid var(--line)}
   .nav-links{display:none}
   .nav-links.open{display:flex;position:absolute;top:78px;left:0;right:0;flex-direction:column;background:var(--bg2);
     padding:24px;border-bottom:1px solid var(--line);gap:22px}
@@ -269,12 +305,12 @@ footer{border-top:1px solid var(--line);padding:56px 0 48px;margin-top:70px}
   <div class="wrap nav-in">
     <a href="#" class="logo"><span class="crown">♛</span> Sport <span class="grad">&amp; Connect</span></a>
     <nav class="nav-links" id="navLinks">
-      <a href="#concepto">Concepto</a>
-      <a href="#eventos">Eventos</a>
+      <a href="#incluye">La entrada</a>
+      <a href="#galeria">Galería</a>
       <a href="#agenda">Agenda</a>
-      <a href="#speaker">Speaker</a>
+      <a href="#sede">Sede</a>
       <a href="#faq">FAQ</a>
-      <button class="btn btn-primary" onclick="openModal('combo')">Inscribirme</button>
+      <button class="btn btn-primary" onclick="openModal()">Reservar entrada</button>
     </nav>
     <button class="menu-btn" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
   </div>
@@ -285,16 +321,21 @@ footer{border-top:1px solid var(--line);padding:56px 0 48px;margin-top:70px}
   <div class="wrap hero-grid">
     <div>
       <span class="badge"><span class="pulse"></span> Primera Edición · Pádel</span>
-      <h1>Donde el deporte <span class="grad">conecta</span> personas.</h1>
-      <p class="lead">Una jornada para jugar, escuchar y conectar. Torneo de pádel, una charla con nuestro speaker invitado y un evento de networking a la altura. Elegí tu experiencia e inscribite.</p>
+      <h1>Un evento. <span class="grad">Tres</span> experiencias.</h1>
+      <p class="lead">Torneo de pádel mixto, una charla con nuestro speaker invitado y un evento de networking. Todo en una jornada, con una sola entrada.</p>
+      <div class="hero-feats">
+        <span class="f"><b>◆</b> Torneo mixto</span>
+        <span class="f"><b>◆</b> Estacionamiento gratuito</span>
+        <span class="f"><b>◆</b> Una sola entrada</span>
+      </div>
       <div class="hero-cta">
-        <button class="btn btn-primary" onclick="document.getElementById('eventos').scrollIntoView()">Ver eventos</button>
-        <button class="btn btn-ghost" onclick="openModal('combo')">Pase completo</button>
+        <button class="btn btn-primary" onclick="openModal()">Reservar mi entrada</button>
+        <button class="btn btn-ghost" onclick="document.getElementById('incluye').scrollIntoView()">Qué incluye</button>
       </div>
       <div class="hero-meta">
         <div class="m"><b>15 Ago</b><span>2026</span></div>
-        <div class="m"><b>III</b><span>Experiencias</span></div>
-        <div class="m"><b>120</b><span>Asistentes</span></div>
+        <div class="m"><b>Sede</b><span>Buenos Aires</span></div>
+        <div class="m"><b>Mixto</b><span>Todos los niveles</span></div>
       </div>
     </div>
     <div class="hero-card">
@@ -312,57 +353,57 @@ footer{border-top:1px solid var(--line);padding:56px 0 48px;margin-top:70px}
 <!-- MARQUEE -->
 <div class="marquee">
   <div class="marquee-in">
-    <span>Torneo de Pádel <i>◆</i> Speaker <i>◆</i> Networking <i>◆</i> Premios <i>◆</i> Cóctel <i>◆</i> Cobertura <i>◆</i> Torneo de Pádel <i>◆</i> Speaker <i>◆</i> Networking <i>◆</i> Premios <i>◆</i> Cóctel <i>◆</i> Cobertura <i>◆</i></span>
+    <span>Torneo Mixto <i>◆</i> Speaker <i>◆</i> Networking <i>◆</i> Cóctel <i>◆</i> Estacionamiento Gratuito <i>◆</i> Una Sola Entrada <i>◆</i> Torneo Mixto <i>◆</i> Speaker <i>◆</i> Networking <i>◆</i> Cóctel <i>◆</i> Estacionamiento Gratuito <i>◆</i> Una Sola Entrada <i>◆</i></span>
   </div>
 </div>
 
-<!-- CONCEPTO -->
-<section id="concepto">
+<!-- INCLUYE -->
+<section id="incluye">
   <div class="wrap">
     <div class="sec-head">
-      <span class="eyebrow">El concepto</span>
-      <h2>Deporte y network, en un mismo escenario.</h2>
-      <p>No es solo un torneo ni solo un evento de networking. Es un formato donde la cancha rompe el hielo y las conexiones reales suceden con naturalidad.</p>
+      <span class="eyebrow">Una entrada, todo incluido</span>
+      <h2>Qué incluye tu entrada.</h2>
+      <p>No se compra por partes: tu entrada te da acceso a las tres experiencias de la jornada, en un mismo lugar y en un mismo día.</p>
     </div>
     <div class="concept">
       <div class="cc">
         <div class="num">I</div>
-        <h3>Jugás</h3>
-        <p>Competí en el torneo de pádel sin importar tu nivel. Categorías para que todos disfruten y compitan en igualdad de condiciones.</p>
+        <h3>Torneo de Pádel</h3>
+        <div class="cc-when">10:00 – 17:00 · Mixto</div>
+        <p>Competí en un torneo mixto por categorías, sin importar tu nivel. Incluye kit de participante, partidos, hidratación y premios.</p>
       </div>
       <div class="cc">
         <div class="num">II</div>
-        <h3>Aprendés</h3>
-        <p>Una charla con un speaker invitado sobre mentalidad, negocios y alto rendimiento. Ideas que se llevan a la cancha y a la vida.</p>
+        <h3>La Charla</h3>
+        <div class="cc-when">15:00 – 16:00 · Speaker</div>
+        <p>Una charla con nuestro speaker invitado sobre mentalidad, negocios y alto rendimiento. 45 minutos más Q&A.</p>
       </div>
       <div class="cc">
         <div class="num">III</div>
-        <h3>Conectás</h3>
-        <p>Evento de networking con cóctel, música y dinámicas para que conozcas gente con tus mismos intereses y objetivos.</p>
+        <h3>Networking</h3>
+        <div class="cc-when">18:00 – 21:00 · Cóctel</div>
+        <p>Cierre con cóctel, música y dinámicas para conectar con gente afín. La parte más esperada de la jornada.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- EVENTOS -->
-<section id="eventos">
+<!-- GALERIA -->
+<section id="galeria">
   <div class="wrap">
     <div class="sec-head">
-      <span class="eyebrow">Los eventos</span>
-      <h2>Elegí en qué participar.</h2>
-      <p>Seleccioná cualquier experiencia para inscribirte y reservar tu lugar. Podés sumar una, dos o las tres.</p>
+      <span class="eyebrow">Galería</span>
+      <h2>El ambiente de la jornada.</h2>
+      <p>Un vistazo a lo que se vive: deporte, charla y conexiones. (Espacios listos para tus fotos reales.)</p>
     </div>
-    <div class="events" id="eventsGrid"></div>
-
-    <div class="ev-combo">
-      <div>
-        <h3>Pase Completo</h3>
-        <p>Torneo, Speaker y Networking. La experiencia entera, con un beneficio exclusivo.</p>
-      </div>
-      <div style="text-align:right">
-        <div class="price"><s>$42.000</s> $34.900</div>
-        <button class="btn btn-primary" style="margin-top:12px" onclick="openModal('combo')">Inscribirme al pase</button>
-      </div>
+    <div class="gallery">
+      <!-- Reemplazá el contenido de cada .glr por <img src="img/tu-foto.jpg" alt=""> -->
+      <div class="glr big"><span class="cap">Torneo<small>Foto 1</small></span></div>
+      <div class="glr"><span class="cap">Cancha<small>Foto 2</small></span></div>
+      <div class="glr"><span class="cap">Speaker<small>Foto 3</small></span></div>
+      <div class="glr wide"><span class="cap">Networking<small>Foto 4</small></span></div>
+      <div class="glr"><span class="cap">Premiación<small>Foto 5</small></span></div>
+      <div class="glr"><span class="cap">Cóctel<small>Foto 6</small></span></div>
     </div>
   </div>
 </section>
@@ -376,9 +417,9 @@ footer{border-top:1px solid var(--line);padding:56px 0 48px;margin-top:70px}
     </div>
     <div class="agenda">
       <div class="ag"><div class="t">09:00</div><div><h4>Acreditación & Welcome coffee</h4><p>Recibimos a los participantes, entregamos los kits y armamos los cuadros del torneo.</p><span class="chip">Todos</span></div></div>
-      <div class="ag"><div class="t">10:00</div><div><h4>Torneo de Pádel — Fase de grupos</h4><p>Comienza la competencia por categorías. Partidos ágiles, mucha intensidad.</p><span class="chip">Torneo</span></div></div>
+      <div class="ag"><div class="t">10:00</div><div><h4>Torneo de Pádel Mixto — Fase de grupos</h4><p>Comienza la competencia por categorías. Partidos ágiles, mucha intensidad.</p><span class="chip">Torneo</span></div></div>
       <div class="ag"><div class="t">13:00</div><div><h4>Almuerzo & pausa activa</h4><p>Catering, hidratación y un momento para recargar energías.</p><span class="chip">Todos</span></div></div>
-      <div class="ag"><div class="t">15:00</div><div><h4>La Charla con el Speaker</h4><p>Mentalidad ganadora, negocios y rendimiento. 45 minutos de charla más Q&A.</p><span class="chip">Speaker</span></div></div>
+      <div class="ag"><div class="t">15:00</div><div><h4>La Charla con el Speaker</h4><p>Mentalidad ganadora, negocios y rendimiento. 45 minutos más Q&A.</p><span class="chip">Speaker</span></div></div>
       <div class="ag"><div class="t">16:30</div><div><h4>Finales & premiación</h4><p>Las mejores parejas se enfrentan por el título de la primera edición.</p><span class="chip">Torneo</span></div></div>
       <div class="ag"><div class="t">18:00</div><div><h4>Networking & Cóctel</h4><p>Bebidas, música, dinámicas de conexión y un cierre a la altura.</p><span class="chip">Networking</span></div></div>
     </div>
@@ -393,7 +434,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 48px;margin-top:70px}
       <h2>Una charla que te cambia el partido.</h2>
     </div>
     <div class="speaker">
-      <div class="ph">Speaker</div>
+      <div class="ph">Foto Speaker</div>
       <div>
         <h3>Speaker Invitado</h3>
         <div class="role">Referente en mentalidad & alto rendimiento</div>
@@ -403,7 +444,79 @@ footer{border-top:1px solid var(--line);padding:56px 0 48px;margin-top:70px}
           <li>Mentalidad bajo presión: ganar el punto importante</li>
           <li>Networking con propósito: relaciones que suman</li>
         </ul>
-        <button class="btn btn-primary" style="margin-top:26px" onclick="openModal('speaker')">Reservar mi lugar</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEDE / LOCATION -->
+<section id="sede">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">La sede</span>
+      <h2>Dónde nos encontramos.</h2>
+    </div>
+    <div class="loc">
+      <div class="loc-info">
+        <h3>Club de Pádel — Sede a confirmar</h3>
+        <div class="addr">Av. Ejemplo 1234 · Buenos Aires, Argentina</div>
+        <div class="loc-feats">
+          <div class="loc-feat"><div class="ic">P</div><div><b>Estacionamiento gratuito</b><span>Para todos los asistentes, en el predio.</span></div></div>
+          <div class="loc-feat"><div class="ic">◆</div><div><b>Torneo mixto</b><span>Parejas mixtas · todos los niveles.</span></div></div>
+          <div class="loc-feat"><div class="ic">◷</div><div><b>Jornada completa</b><span>De 09:00 a 21:00 hs · una sola entrada.</span></div></div>
+          <div class="loc-feat"><div class="ic">♿</div><div><b>Espacio accesible</b><span>Instalaciones aptas y cómodas.</span></div></div>
+        </div>
+      </div>
+      <div class="loc-map">
+        <!-- Cuando tengas la dirección real, reemplazá por un iframe de Google Maps -->
+        <span class="cap">Mapa de la sede<small>Ubicación por confirmar</small></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPONSORS -->
+<section id="sponsors">
+  <div class="wrap sponsors">
+    <div class="sec-head center">
+      <span class="eyebrow">Apoyado por</span>
+      <h2>Nuestros sponsors.</h2>
+      <p>Marcas que hacen posible esta primera edición. (Espacios listos para sus logos.)</p>
+    </div>
+    <div class="logos">
+      <!-- Reemplazá cada caja por <img src="img/logo.png" alt="Marca"> -->
+      <div class="logo-box">Tu logo</div>
+      <div class="logo-box">Tu logo</div>
+      <div class="logo-box">Tu logo</div>
+      <div class="logo-box">Tu logo</div>
+      <div class="logo-box">Tu logo</div>
+    </div>
+  </div>
+</section>
+
+<!-- PRECIO / ENTRADA -->
+<section id="entrada">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">La entrada</span>
+      <h2>Una entrada, toda la experiencia.</h2>
+    </div>
+    <div class="price-wrap">
+      <div class="price-left">
+        <h3>Entrada General</h3>
+        <div class="p-sub">Acceso a la jornada completa</div>
+        <ul>
+          <li>Torneo de pádel mixto + kit de participante</li>
+          <li>La Charla con el speaker invitado</li>
+          <li>Evento de networking con cóctel</li>
+          <li>Estacionamiento gratuito en el predio</li>
+          <li>Hidratación y cobertura del evento</li>
+        </ul>
+      </div>
+      <div class="price-right">
+        <div class="amt">$34.900<small>por persona · entrada única</small></div>
+        <button class="btn btn-primary" onclick="openModal()">Reservar mi entrada</button>
+        <div class="fine">Cupos limitados · pago seguro online</div>
       </div>
     </div>
   </div>
@@ -412,15 +525,15 @@ footer{border-top:1px solid var(--line);padding:56px 0 48px;margin-top:70px}
 <!-- FAQ -->
 <section id="faq">
   <div class="wrap">
-    <div class="sec-head" style="margin:0 auto 46px;text-align:center">
+    <div class="sec-head center" style="margin-bottom:46px">
       <span class="eyebrow">Dudas frecuentes</span>
       <h2>Antes de inscribirte.</h2>
     </div>
     <div class="faq">
-      <details class="fq"><summary>¿Necesito tener experiencia en pádel?</summary><p>No. Hay categorías por nivel y también podés venir solo al speaker o al networking sin jugar.</p></details>
-      <details class="fq"><summary>¿Puedo inscribirme solo a una parte?</summary><p>Sí. Cada experiencia se inscribe por separado, o podés sumar el Pase Completo con un beneficio exclusivo.</p></details>
-      <details class="fq"><summary>¿Cómo es el pago?</summary><p>Online con tarjeta o MercadoPago al momento de inscribirte. Recibís tu ticket con un código de confirmación.</p></details>
-      <details class="fq"><summary>¿Qué incluye el torneo?</summary><p>Kit de participante, partidos por categoría, hidratación y premios para los ganadores.</p></details>
+      <details class="fq"><summary>¿La entrada incluye todo?</summary><p>Sí. Es una sola entrada que da acceso a las tres experiencias: el torneo de pádel mixto, la charla con el speaker y el evento de networking. No se compra por partes.</p></details>
+      <details class="fq"><summary>¿Necesito tener experiencia en pádel?</summary><p>No. El torneo es mixto y por categorías según tu nivel. Si preferís, podés disfrutar la charla y el networking igual.</p></details>
+      <details class="fq"><summary>¿Hay estacionamiento?</summary><p>Sí, estacionamiento gratuito para todos los asistentes en el predio de la sede.</p></details>
+      <details class="fq"><summary>¿Cómo es el pago?</summary><p>Online con tarjeta o MercadoPago al momento de reservar. Recibís tu ticket con un código de confirmación.</p></details>
       <details class="fq"><summary>¿Puedo transferir mi entrada?</summary><p>Sí, escribinos hasta 48 horas antes del evento y reasignamos tu lugar a otra persona.</p></details>
     </div>
   </div>
@@ -432,8 +545,8 @@ footer{border-top:1px solid var(--line);padding:56px 0 48px;margin-top:70px}
     <div class="final">
       <span class="eyebrow">No te lo pierdas</span>
       <h2>Tu próxima conexión está <span class="grad">en la cancha</span>.</h2>
-      <p>Lugares limitados para la primera edición. Asegurá el tuyo hoy.</p>
-      <button class="btn btn-primary" onclick="openModal('combo')">Inscribirme ahora</button>
+      <p>Lugares limitados para la primera edición. Asegurá tu entrada hoy.</p>
+      <button class="btn btn-primary" onclick="openModal()">Reservar mi entrada</button>
     </div>
   </div>
 </section>
@@ -443,9 +556,9 @@ footer{border-top:1px solid var(--line);padding:56px 0 48px;margin-top:70px}
   <div class="wrap foot-in">
     <a href="#" class="logo"><span class="crown">♛</span> Sport <span class="grad">&amp; Connect</span></a>
     <div class="foot-links">
-      <a href="#eventos">Eventos</a>
+      <a href="#incluye">La entrada</a>
       <a href="#agenda">Agenda</a>
-      <a href="#faq">FAQ</a>
+      <a href="#sede">Sede</a>
       <a href="mailto:diogenessortiz@gmail.com">Contacto</a>
     </div>
     <p>© 2026 SPORT & CONNECT · PRIMERA EDICIÓN PÁDEL</p>
@@ -457,7 +570,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 48px;margin-top:70px}
   <div class="modal">
     <div class="modal-head">
       <div>
-        <h3 id="mTitle">Inscripción</h3>
+        <h3 id="mTitle">Reservar entrada</h3>
         <div class="sub" id="mSub">Completá tus datos</div>
       </div>
       <button class="close" onclick="closeModal()">✕</button>
@@ -470,56 +583,18 @@ footer{border-top:1px solid var(--line);padding:56px 0 48px;margin-top:70px}
 <div class="toast" id="toast"></div>
 
 <script>
-/* ---------- DATA ---------- */
-const EVENTS = {
-  torneo:{ id:'torneo', rn:'I', tag:'Torneo', title:'Torneo de Pádel',
-    time:'10:00 – 17:00 hs', price:18000, spots:'48 lugares · por parejas',
-    desc:'Competí por categorías sin importar tu nivel. Incluye kit, partidos, hidratación y premios para los ganadores.' },
-  speaker:{ id:'speaker', rn:'II', tag:'Charla', title:'Speaker · La Charla',
-    time:'15:00 – 16:00 hs', price:9000, spots:'80 lugares · butaca',
-    desc:'Charla sobre mentalidad, alto rendimiento y negocios con nuestro speaker invitado. 45 minutos más Q&A.' },
-  networking:{ id:'networking', rn:'III', tag:'Networking', title:'Evento de Networking',
-    time:'18:00 – 21:00 hs', price:15000, spots:'120 lugares · open',
-    desc:'Cóctel con bebidas, música y dinámicas para conectar con gente afín. La parte más esperada de la jornada.' },
-  combo:{ id:'combo', rn:'◆', tag:'Pase Completo', title:'Pase Completo',
-    time:'09:00 – 21:00 hs', price:34900, spots:'Cupos limitados',
-    desc:'Torneo, Speaker y Networking. Toda la experiencia con un beneficio exclusivo.' }
-};
+/* ---------- DATA — ENTRADA ÚNICA ---------- */
+const ENTRADA = { title:'Entrada General', price:34900, spots:'Cupos limitados' };
 const money = n => '$'+n.toLocaleString('es-AR');
 
-/* ---------- RENDER EVENT CARDS ---------- */
-const grid = document.getElementById('eventsGrid');
-['torneo','speaker','networking'].forEach(k=>{
-  const e = EVENTS[k];
-  const card = document.createElement('div');
-  card.className='ev';
-  card.onclick = ()=>openModal(k);
-  card.innerHTML = `
-    <div class="ev-top">
-      <span class="rn">${e.rn}</span>
-      <span class="ev-tag">${e.tag}</span>
-      <span class="ev-price">${money(e.price)}</span>
-    </div>
-    <div class="ev-body">
-      <h3>${e.title}</h3>
-      <div class="ev-time">${e.time}</div>
-      <p>${e.desc}</p>
-      <div class="ev-foot">
-        <span class="ev-spots">${e.spots}</span>
-        <button class="btn btn-primary" onclick="event.stopPropagation();openModal('${k}')">Inscribirme</button>
-      </div>
-    </div>`;
-  grid.appendChild(card);
-});
-
 /* ---------- MODAL FLOW ---------- */
-let current=null, step=1, payMethod='card';
+let step=1, payMethod='card';
 const overlay=document.getElementById('overlay');
 const body=document.getElementById('mBody');
 const foot=document.getElementById('mFoot');
 
-function openModal(key){
-  current=EVENTS[key]; step=1; payMethod='card';
+function openModal(){
+  step=1; payMethod='card';
   overlay.classList.add('show');
   document.body.style.overflow='hidden';
   renderStep();
@@ -536,7 +611,7 @@ function bar(){ return `<div class="steps">
   <div class="s ${step>=3?'active':''}"></div></div>`; }
 
 function renderStep(){
-  document.getElementById('mTitle').textContent = current.title;
+  document.getElementById('mTitle').textContent = 'Reservar entrada';
   if(step===1){ renderData(); }
   else if(step===2){ renderPay(); }
   else { renderSuccess(); }
@@ -545,13 +620,6 @@ function renderStep(){
 /* STEP 1 — DATA */
 function renderData(){
   document.getElementById('mSub').textContent='Paso 1 de 3 · Tus datos';
-  let extra='';
-  if(current.id==='torneo'){
-    extra = `<div class="field"><label>Categoría / nivel</label>
-      <select id="f_cat"><option>Iniciación</option><option>Intermedio</option><option>Avanzado</option><option>Libre</option></select></div>
-      <div class="field"><label>Nombre de tu compañero/a de pareja</label>
-      <input id="f_partner" placeholder="Opcional · te asignamos uno si venís solo/a"></div>`;
-  }
   body.innerHTML = bar() + `
     <div class="row2">
       <div class="field"><label>Nombre</label><input id="f_name" placeholder="Tu nombre"><div class="err">Ingresá tu nombre</div></div>
@@ -559,10 +627,17 @@ function renderData(){
     </div>
     <div class="field"><label>Email</label><input id="f_email" type="email" placeholder="tu@email.com"><div class="err">Email inválido</div></div>
     <div class="field"><label>WhatsApp</label><input id="f_phone" placeholder="+54 9 11 ..."><div class="err">Ingresá un teléfono</div></div>
-    ${extra}`;
+    <div class="row2">
+      <div class="field"><label>¿Jugás el torneo?</label>
+        <select id="f_play"><option value="Sí, juego el torneo">Sí, juego el torneo</option><option value="Solo charla y networking">Solo charla y networking</option></select></div>
+      <div class="field"><label>Categoría / nivel</label>
+        <select id="f_cat"><option>Iniciación</option><option>Intermedio</option><option>Avanzado</option><option>Libre</option></select></div>
+    </div>
+    <div class="field"><label>Compañero/a de pareja (torneo mixto)</label>
+      <input id="f_partner" placeholder="Opcional · te asignamos pareja si venís solo/a"></div>`;
   foot.innerHTML = `<button class="btn btn-ghost" onclick="closeModal()">Cancelar</button>
     <button class="btn btn-primary" onclick="toPay()">Continuar al pago</button>`;
-  const saved=JSON.parse(localStorage.getItem('mn_user')||'{}');
+  const saved=JSON.parse(localStorage.getItem('sc_user')||'{}');
   ['name','last','email','phone'].forEach(k=>{ if(saved[k]) document.getElementById('f_'+k).value=saved[k]; });
 }
 
@@ -578,21 +653,21 @@ function toPay(){
   bad = invalid('f_email',!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) || bad;
   bad = invalid('f_phone',phone.length<6) || bad;
   if(bad){ toast('Revisá los campos marcados'); return; }
-  localStorage.setItem('mn_user',JSON.stringify({name,last,email,phone}));
-  order={ event:current.title, eventId:current.id, name:name+' '+last, email, phone, price:current.price,
-    cat: val('f_cat')||null, partner: val('f_partner')||null };
+  localStorage.setItem('sc_user',JSON.stringify({name,last,email,phone}));
+  order={ event:ENTRADA.title, name:name+' '+last, email, phone, price:ENTRADA.price,
+    play: val('f_play'), cat: val('f_cat'), partner: val('f_partner')||null };
   step=2; renderStep();
 }
 
 /* STEP 2 — PAY */
 function renderPay(){
   document.getElementById('mSub').textContent='Paso 2 de 3 · Pago seguro';
-  const fee = Math.round(current.price*0.05);
-  const total = current.price+fee;
+  const fee = Math.round(ENTRADA.price*0.05);
+  const total = ENTRADA.price+fee;
   order.total=total;
   body.innerHTML = bar() + `
     <div class="osum">
-      <div class="li"><span>${current.title}</span><b>${money(current.price)}</b></div>
+      <div class="li"><span>Entrada General · jornada completa</span><b>${money(ENTRADA.price)}</b></div>
       <div class="li"><span>Costo de servicio</span><b>${money(fee)}</b></div>
       <div class="li tot"><span>Total</span><b>${money(total)}</b></div>
     </div>
@@ -640,8 +715,8 @@ function pay(){
   setTimeout(()=>{
     order.id='SC-'+Math.random().toString(36).slice(2,7).toUpperCase()+'-'+(Date.now()%10000);
     order.date=new Date().toLocaleString('es-AR',{day:'2-digit',month:'short',hour:'2-digit',minute:'2-digit'});
-    const all=JSON.parse(localStorage.getItem('mn_orders')||'[]'); all.push(order);
-    localStorage.setItem('mn_orders',JSON.stringify(all));
+    const all=JSON.parse(localStorage.getItem('sc_orders')||'[]'); all.push(order);
+    localStorage.setItem('sc_orders',JSON.stringify(all));
     step=3; renderStep();
   },1700);
 }
@@ -651,19 +726,18 @@ function renderSuccess(){
   document.getElementById('mSub').textContent='Paso 3 de 3 · Confirmado';
   body.innerHTML = `<div class="success">
     <div class="check">✓</div>
-    <h3>Inscripción confirmada</h3>
+    <h3>Entrada confirmada</h3>
     <p>Te enviamos los detalles a <b style="color:var(--ink)">${order.email}</b>. Guardá tu código de confirmación.</p>
     <div class="ticket">
       <div class="id">${order.id}</div>
-      <div class="li"><span>Experiencia</span><b style="color:var(--ink)">${order.event}</b></div>
+      <div class="li"><span>Entrada</span><b style="color:var(--ink)">Jornada completa</b></div>
       <div class="li"><span>A nombre de</span><b style="color:var(--ink)">${order.name}</b></div>
-      ${order.cat?`<div class="li"><span>Categoría</span><b style="color:var(--ink)">${order.cat}</b></div>`:''}
+      <div class="li"><span>Torneo</span><b style="color:var(--ink)">${order.play}${order.play.startsWith('Sí')? ' · '+order.cat : ''}</b></div>
       <div class="li"><span>Total pagado</span><b style="color:var(--gold)">${money(order.total)}</b></div>
       <div class="li"><span>Fecha</span><b style="color:var(--ink)">${order.date}</b></div>
     </div>
   </div>`;
-  foot.innerHTML = `<button class="btn btn-ghost" onclick="closeModal()">Cerrar</button>
-    <button class="btn btn-primary" onclick="closeModal();toast('Nos vemos en la cancha')">Sumar otra experiencia</button>`;
+  foot.innerHTML = `<button class="btn btn-primary" onclick="closeModal();toast('Nos vemos en la cancha')" style="flex:1">Listo</button>`;
 }
 
 /* ---------- TOAST ---------- */
