@@ -110,6 +110,11 @@ header.nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(16px);
 .marquee-in span{display:flex;align-items:center}
 .marquee-in i{color:var(--gold);font-style:normal;margin:0 26px;font-size:.6rem;transform:translateY(-2px)}
 @keyframes scroll{to{transform:translateX(-50%)}}
+/* ---------- SUPPORTED BAND (estática) ---------- */
+.support-band{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(198,162,83,.02);padding:34px 0}
+.support-band .wrap{display:flex;flex-direction:column;align-items:center;gap:16px}
+.support-band .eyebrow{opacity:.85}
+.support-band .sup-logo{height:50px}
 
 /* ---------- SECTION ---------- */
 section{padding:96px 0}
@@ -339,10 +344,6 @@ footer{border-top:1px solid var(--line);padding:56px 0 48px;margin-top:70px}
         <div class="m"><b>Lasaigues</b><span>Padel · Unicenter</span></div>
         <div class="m"><b>17 hs</b><span>4 horas de evento</span></div>
       </div>
-      <div class="hero-support">
-        <span>Supported by</span>
-        <img src="img/universidad-san-andres.png" alt="Universidad de San Andrés">
-      </div>
     </div>
     <div class="hero-card">
       <div class="court">
@@ -356,10 +357,11 @@ footer{border-top:1px solid var(--line);padding:56px 0 48px;margin-top:70px}
   </div>
 </section>
 
-<!-- MARQUEE -->
-<div class="marquee">
-  <div class="marquee-in">
-    <span>Torneo Mixto <i>◆</i> Speaker <i>◆</i> Networking <i>◆</i> Cóctel <i>◆</i> Estacionamiento Gratuito <i>◆</i> Una Sola Entrada <i>◆</i> Torneo Mixto <i>◆</i> Speaker <i>◆</i> Networking <i>◆</i> Cóctel <i>◆</i> Estacionamiento Gratuito <i>◆</i> Una Sola Entrada <i>◆</i></span>
+<!-- SUPPORTED BY (estático) -->
+<div class="support-band">
+  <div class="wrap">
+    <span class="eyebrow">Supported by</span>
+    <img class="sup-logo" src="img/universidad-san-andres.png" alt="Universidad de San Andrés">
   </div>
 </div>
 
@@ -523,16 +525,6 @@ footer{border-top:1px solid var(--line);padding:56px 0 48px;margin-top:70px}
       <h2>Tu próxima conexión está <span class="grad">en la cancha</span>.</h2>
       <p>Lugares limitados para la primera edición. Asegurá tu entrada hoy.</p>
       <button class="btn btn-primary" onclick="openModal()">Reservar mi entrada</button>
-    </div>
-  </div>
-</section>
-
-<!-- SUPPORTED BY -->
-<section id="supported" style="padding:66px 0">
-  <div class="wrap sponsors">
-    <span class="eyebrow" style="display:block;margin-bottom:26px;opacity:.85">Supported by</span>
-    <div class="supported" style="margin-bottom:0">
-      <img class="sup-logo" src="img/universidad-san-andres.png" alt="Universidad de San Andrés">
     </div>
   </div>
 </section>
