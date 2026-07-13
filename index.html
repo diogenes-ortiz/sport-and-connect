@@ -109,37 +109,32 @@ section{padding:96px 0}
 .sec-head h2{font-size:clamp(2.3rem,4.6vw,3.5rem);font-weight:600;margin:18px 0 0}
 .sec-head p{color:var(--muted);font-size:1.08rem;font-weight:300;margin-top:20px}
 
-/* ---------- INCLUYE ---------- */
-.concept{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line)}
-.cc{padding:44px 34px 40px;border-bottom:1px solid var(--line);border-right:1px solid var(--line);transition:.3s}
-.cc:last-child{border-right:0}
-.cc:hover{background:rgba(198,162,83,.03)}
-.cc .num{font-family:var(--serif);font-size:2rem;color:var(--gold);font-style:italic;margin-bottom:20px;font-weight:500}
-.cc h3{font-size:1.7rem;margin-bottom:6px;font-weight:600}
-.cc .cc-when{font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);margin-bottom:14px}
-.cc p{color:var(--muted);font-size:.98rem;font-weight:300}
+/* ---------- EL EVENTO (cards) ---------- */
+.events{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.ev{position:relative;border-radius:5px;overflow:hidden;border:1px solid var(--line);background:var(--panel);
+  display:flex;flex-direction:column;transition:.3s}
+.ev:hover{transform:translateY(-5px);border-color:var(--gold-soft);box-shadow:var(--shadow)}
+.ev-top{height:118px;position:relative;display:grid;place-items:center;
+  background:linear-gradient(160deg,#0f5236,#0a3325);border-bottom:1px solid rgba(198,162,83,.25)}
+.ev-top .rn{font-family:var(--serif);font-size:2.9rem;font-style:italic;font-weight:500;color:var(--gold)}
+.ev-tag{position:absolute;top:14px;left:14px;font-size:.6rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--gold);background:rgba(6,18,12,.55);backdrop-filter:blur(4px);padding:6px 12px;border-radius:2px}
+.ev-body{padding:28px 26px;flex:1;display:flex;flex-direction:column}
+.ev-body h3{font-size:1.6rem;margin-bottom:8px;font-weight:600}
+.ev-time{font-size:.66rem;color:var(--gold);font-weight:500;letter-spacing:.16em;text-transform:uppercase;margin-bottom:18px}
+.ev-list{list-style:none;display:flex;flex-direction:column;gap:10px}
+.ev-list li{display:flex;gap:11px;color:var(--muted);font-size:.94rem;font-weight:300;line-height:1.4}
+.ev-list li::before{content:"—";color:var(--gold);flex:none}
+.ev-cta{text-align:center;margin-top:46px}
 
-/* ---------- GALLERY ---------- */
-.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:14px}
-.glr{position:relative;border-radius:4px;overflow:hidden;border:1px solid var(--line);
-  background:linear-gradient(150deg,#0f5236,#0a2c1e);display:grid;place-items:center}
-.glr::after{content:"";position:absolute;inset:8px;border:1px solid rgba(198,162,83,.22);border-radius:2px}
-.glr img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
-.glr .cap{position:relative;z-index:1;font-family:var(--serif);font-style:italic;font-size:1.2rem;color:var(--gold);
-  text-align:center;padding:0 14px}
-.glr .cap small{display:block;font-family:var(--sans);font-style:normal;font-size:.56rem;letter-spacing:.2em;
-  text-transform:uppercase;color:var(--faint);margin-top:8px}
-.glr.big{grid-column:span 2;grid-row:span 2}
-.glr.wide{grid-column:span 2}
-
-/* ---------- AGENDA ---------- */
+/* ---------- AGENDA (compacta) ---------- */
 .agenda{border-top:1px solid var(--line)}
-.ag{display:grid;grid-template-columns:130px 1fr;gap:30px;padding:28px 0;border-bottom:1px solid var(--line);align-items:baseline}
-.ag .t{font-family:var(--serif);font-weight:600;font-size:1.5rem;color:var(--gold)}
-.ag h4{font-size:1.4rem;margin-bottom:8px;font-weight:600}
-.ag p{color:var(--muted);font-size:.96rem;font-weight:300}
-.ag .chip{display:inline-block;margin-top:12px;font-size:.6rem;padding:5px 13px;border-radius:2px;
-  border:1px solid var(--line);color:var(--faint);letter-spacing:.18em;text-transform:uppercase}
+.ag{display:grid;grid-template-columns:92px 1fr;gap:24px;padding:15px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.ag .t{font-family:var(--serif);font-weight:600;font-size:1.25rem;color:var(--gold)}
+.ag h4{font-size:1.12rem;margin-bottom:3px;font-weight:600;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.ag h4 .chip{font-size:.54rem;padding:3px 9px;border-radius:2px;border:1px solid var(--line);color:var(--faint);
+  letter-spacing:.16em;text-transform:uppercase;font-family:var(--sans);font-weight:500}
+.ag p{color:var(--muted);font-size:.88rem;font-weight:300}
 
 /* ---------- SPEAKER ---------- */
 .speaker{display:grid;grid-template-columns:.82fr 1.18fr;gap:52px;align-items:center;
@@ -281,10 +276,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 48px;margin-top:70px}
 
 @media(max-width:880px){
   .hero-grid{grid-template-columns:1fr;gap:44px}
-  .concept{grid-template-columns:1fr}
-  .cc{border-right:0}
-  .gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px}
-  .glr.big{grid-column:span 2;grid-row:span 1}
+  .events{grid-template-columns:1fr}
   .speaker{grid-template-columns:1fr;gap:34px}
   .loc{grid-template-columns:1fr;gap:28px}
   .logos{grid-template-columns:repeat(3,1fr)}
@@ -305,12 +297,12 @@ footer{border-top:1px solid var(--line);padding:56px 0 48px;margin-top:70px}
   <div class="wrap nav-in">
     <a href="#" class="logo"><span class="crown">♛</span> Sport <span class="grad">&amp; Connect</span></a>
     <nav class="nav-links" id="navLinks">
-      <a href="#incluye">La entrada</a>
-      <a href="#galeria">Galería</a>
+      <a href="#incluye">El evento</a>
       <a href="#agenda">Agenda</a>
+      <a href="#speaker">Speaker</a>
       <a href="#sede">Sede</a>
       <a href="#faq">FAQ</a>
-      <button class="btn btn-primary" onclick="openModal()">Reservar entrada</button>
+      <button class="btn btn-primary" onclick="openModal()">Reservar lugar</button>
     </nav>
     <button class="menu-btn" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
   </div>
@@ -334,7 +326,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 48px;margin-top:70px}
       </div>
       <div class="hero-meta">
         <div class="m"><b>15 Ago</b><span>2026</span></div>
-        <div class="m"><b>Sede</b><span>Buenos Aires</span></div>
+        <div class="m"><b>Lasaigues</b><span>Padel · Unicenter</span></div>
         <div class="m"><b>Mixto</b><span>Todos los niveles</span></div>
       </div>
     </div>
@@ -357,53 +349,57 @@ footer{border-top:1px solid var(--line);padding:56px 0 48px;margin-top:70px}
   </div>
 </div>
 
-<!-- INCLUYE -->
+<!-- EL EVENTO -->
 <section id="incluye">
   <div class="wrap">
     <div class="sec-head">
-      <span class="eyebrow">Una entrada, todo incluido</span>
-      <h2>Qué incluye tu entrada.</h2>
-      <p>No se compra por partes: tu entrada te da acceso a las tres experiencias de la jornada, en un mismo lugar y en un mismo día.</p>
+      <span class="eyebrow">El evento</span>
+      <h2>Qué incluye tu evento.</h2>
+      <p>Del primer partido al último brindis: tres momentos en una misma jornada.</p>
     </div>
-    <div class="concept">
-      <div class="cc">
-        <div class="num">I</div>
-        <h3>Torneo de Pádel</h3>
-        <div class="cc-when">10:00 – 17:00 · Mixto</div>
-        <p>Competí en un torneo mixto por categorías, sin importar tu nivel. Incluye kit de participante, partidos, hidratación y premios.</p>
+    <div class="events">
+      <div class="ev">
+        <div class="ev-top"><span class="rn">I</span><span class="ev-tag">Torneo</span></div>
+        <div class="ev-body">
+          <h3>Torneo de Pádel</h3>
+          <div class="ev-time">10:00 – 17:00 · Mixto</div>
+          <ul class="ev-list">
+            <li>Torneo mixto por categorías, todos los niveles</li>
+            <li>Kit de participante</li>
+            <li>Hidratación durante toda la jornada</li>
+            <li>Premios para los ganadores</li>
+          </ul>
+        </div>
       </div>
-      <div class="cc">
-        <div class="num">II</div>
-        <h3>La Charla</h3>
-        <div class="cc-when">15:00 – 16:00 · Speaker</div>
-        <p>Una charla con nuestro speaker invitado sobre mentalidad, negocios y alto rendimiento. 45 minutos más Q&A.</p>
+      <div class="ev">
+        <div class="ev-top"><span class="rn">II</span><span class="ev-tag">Speaker</span></div>
+        <div class="ev-body">
+          <h3>La Charla</h3>
+          <div class="ev-time">15:00 – 16:00 · Speaker</div>
+          <ul class="ev-list">
+            <li>Speaker invitado en vivo</li>
+            <li>Mentalidad, negocios y alto rendimiento</li>
+            <li>45 minutos de charla</li>
+            <li>Ronda de preguntas y respuestas</li>
+          </ul>
+        </div>
       </div>
-      <div class="cc">
-        <div class="num">III</div>
-        <h3>Networking</h3>
-        <div class="cc-when">18:00 – 21:00 · Cóctel</div>
-        <p>Cierre con cóctel, música y dinámicas para conectar con gente afín. La parte más esperada de la jornada.</p>
+      <div class="ev">
+        <div class="ev-top"><span class="rn">III</span><span class="ev-tag">Networking</span></div>
+        <div class="ev-body">
+          <h3>Networking</h3>
+          <div class="ev-time">18:00 – 21:00 · Cóctel</div>
+          <ul class="ev-list">
+            <li>Cóctel con bebidas y música</li>
+            <li>Dinámicas para conectar</li>
+            <li>Gente con tus mismos intereses</li>
+            <li>Cierre a la altura de la jornada</li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- GALERIA -->
-<section id="galeria">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow">Galería</span>
-      <h2>El ambiente de la jornada.</h2>
-      <p>Un vistazo a lo que se vive: deporte, charla y conexiones. (Espacios listos para tus fotos reales.)</p>
-    </div>
-    <div class="gallery">
-      <!-- Reemplazá el contenido de cada .glr por <img src="img/tu-foto.jpg" alt=""> -->
-      <div class="glr big"><span class="cap">Torneo<small>Foto 1</small></span></div>
-      <div class="glr"><span class="cap">Cancha<small>Foto 2</small></span></div>
-      <div class="glr"><span class="cap">Speaker<small>Foto 3</small></span></div>
-      <div class="glr wide"><span class="cap">Networking<small>Foto 4</small></span></div>
-      <div class="glr"><span class="cap">Premiación<small>Foto 5</small></span></div>
-      <div class="glr"><span class="cap">Cóctel<small>Foto 6</small></span></div>
+    <div class="ev-cta">
+      <button class="btn btn-primary" onclick="openModal()">Reservar mi lugar</button>
     </div>
   </div>
 </section>
@@ -416,12 +412,12 @@ footer{border-top:1px solid var(--line);padding:56px 0 48px;margin-top:70px}
       <h2>Así se vive la jornada.</h2>
     </div>
     <div class="agenda">
-      <div class="ag"><div class="t">09:00</div><div><h4>Acreditación & Welcome coffee</h4><p>Recibimos a los participantes, entregamos los kits y armamos los cuadros del torneo.</p><span class="chip">Todos</span></div></div>
-      <div class="ag"><div class="t">10:00</div><div><h4>Torneo de Pádel Mixto — Fase de grupos</h4><p>Comienza la competencia por categorías. Partidos ágiles, mucha intensidad.</p><span class="chip">Torneo</span></div></div>
-      <div class="ag"><div class="t">13:00</div><div><h4>Almuerzo & pausa activa</h4><p>Catering, hidratación y un momento para recargar energías.</p><span class="chip">Todos</span></div></div>
-      <div class="ag"><div class="t">15:00</div><div><h4>La Charla con el Speaker</h4><p>Mentalidad ganadora, negocios y rendimiento. 45 minutos más Q&A.</p><span class="chip">Speaker</span></div></div>
-      <div class="ag"><div class="t">16:30</div><div><h4>Finales & premiación</h4><p>Las mejores parejas se enfrentan por el título de la primera edición.</p><span class="chip">Torneo</span></div></div>
-      <div class="ag"><div class="t">18:00</div><div><h4>Networking & Cóctel</h4><p>Bebidas, música, dinámicas de conexión y un cierre a la altura.</p><span class="chip">Networking</span></div></div>
+      <div class="ag"><div class="t">09:00</div><div><h4>Acreditación & Welcome coffee <span class="chip">Todos</span></h4><p>Kits, cuadros del torneo y bienvenida.</p></div></div>
+      <div class="ag"><div class="t">10:00</div><div><h4>Torneo de Pádel Mixto <span class="chip">Torneo</span></h4><p>Fase de grupos por categorías.</p></div></div>
+      <div class="ag"><div class="t">13:00</div><div><h4>Almuerzo & pausa activa <span class="chip">Todos</span></h4><p>Catering e hidratación para recargar.</p></div></div>
+      <div class="ag"><div class="t">15:00</div><div><h4>La Charla con el Speaker <span class="chip">Speaker</span></h4><p>45 minutos más ronda de Q&A.</p></div></div>
+      <div class="ag"><div class="t">16:30</div><div><h4>Finales & premiación <span class="chip">Torneo</span></h4><p>Las mejores parejas por el título.</p></div></div>
+      <div class="ag"><div class="t">18:00</div><div><h4>Networking & Cóctel <span class="chip">Networking</span></h4><p>Bebidas, música y dinámicas de cierre.</p></div></div>
     </div>
   </div>
 </section>
@@ -458,19 +454,19 @@ footer{border-top:1px solid var(--line);padding:56px 0 48px;margin-top:70px}
     </div>
     <div class="loc">
       <div class="loc-info">
-        <h3>Club de Pádel — Sede a confirmar</h3>
-        <div class="addr">Av. Ejemplo 1234 · Buenos Aires, Argentina</div>
+        <h3>Lasaigues Padel · Unicenter</h3>
+        <div class="addr">Zona Norte · Buenos Aires, Argentina — <a href="https://maps.app.goo.gl/DNQHXBorxZbspcNh8" target="_blank" rel="noopener" style="color:var(--gold)">Ver en Google Maps</a></div>
         <div class="loc-feats">
           <div class="loc-feat"><div class="ic">P</div><div><b>Estacionamiento gratuito</b><span>Para todos los asistentes, en el predio.</span></div></div>
           <div class="loc-feat"><div class="ic">◆</div><div><b>Torneo mixto</b><span>Parejas mixtas · todos los niveles.</span></div></div>
-          <div class="loc-feat"><div class="ic">◷</div><div><b>Jornada completa</b><span>De 09:00 a 21:00 hs · una sola entrada.</span></div></div>
+          <div class="loc-feat"><div class="ic">◷</div><div><b>Jornada completa</b><span>De 09:00 a 21:00 hs · un solo evento.</span></div></div>
           <div class="loc-feat"><div class="ic">♿</div><div><b>Espacio accesible</b><span>Instalaciones aptas y cómodas.</span></div></div>
         </div>
       </div>
-      <div class="loc-map">
-        <!-- Cuando tengas la dirección real, reemplazá por un iframe de Google Maps -->
-        <span class="cap">Mapa de la sede<small>Ubicación por confirmar</small></span>
-      </div>
+      <a class="loc-map" href="https://maps.app.goo.gl/DNQHXBorxZbspcNh8" target="_blank" rel="noopener">
+        <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa Lasaigues Padel Unicenter"
+          src="https://www.google.com/maps?q=Lasaigues%20Padel%20Unicenter&z=16&output=embed"></iframe>
+      </a>
     </div>
   </div>
 </section>
